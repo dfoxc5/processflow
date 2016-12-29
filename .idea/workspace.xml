@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="beeecf5a-7331-4e83-8ebf-38b6afffbdb2" name="Default" comment="" />
+    <list default="true" id="beeecf5a-7331-4e83-8ebf-38b6afffbdb2" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -223,11 +226,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -759,6 +772,14 @@
       <option name="presentableId" value="Default" />
       <updated>1481745082237</updated>
     </task>
+    <task id="LOCAL-00001" summary="Procfile">
+      <created>1483034455667</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1483034455667</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -813,6 +834,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Procfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Procfile" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -839,62 +864,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/databaseManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="104" lean-forward="false" selection-start-line="75" selection-start-column="104" selection-end-line="75" selection-end-column="104" />
-          <folding>
-            <marker date="1482968509381" expanded="true" signature="246:294" ph="SELECT ROLES... ROLES" />
-            <marker date="1482968509381" expanded="true" signature="246:311" ph="SELECT ROLES... ROLES" />
-            <marker date="1482968509381" expanded="true" signature="536:555" ph="SELECT * FRO... ROLES" />
-            <marker date="1482968509381" expanded="true" signature="748:784" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="1061:1087" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="1191:1226" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="1191:1227" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="1191:1252" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="1691:1747" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="1857:1931" ph="SELECT ROLE_... ROLE_STORY" />
-            <marker date="1482968509381" expanded="true" signature="2118:2161" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2118:2202" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2118:2210" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2774" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2783" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2787" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2796" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="3129:3207" ph="SELECT EPICS... EPICS" />
-            <marker date="1482968509381" expanded="true" signature="3129:3208" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="3129:3222" ph="SELECT EPICS... EPICS" />
-            <marker date="1482968509381" expanded="true" signature="3129:3227" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="3905:4006" ph="INSERT INTO USER_STORIES... " />
-            <marker date="1482968509381" expanded="true" signature="4541:4594" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="4541:4611" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="4780:4861" ph="INSERT INTO ASSUMPTIONS... " />
-            <marker date="1482968509381" expanded="true" signature="5531:5604" ph="INSERT INTO STEPS... " />
-            <marker date="1482968509381" expanded="true" signature="5925:5983" ph="INSERT INTO ROLE_STORIES... " />
-            <marker date="1482968509381" expanded="true" signature="6824:6867" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="6824:6868" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="7222:7258" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="7222:7259" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="7382:7425" ph="SELECT * FRO... ASSUMPTIONS" />
-            <marker date="1482968509381" expanded="true" signature="7766:7811" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="7766:7812" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="7766:7826" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="8165:8207" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="8612:8653" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8612:8670" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8717:8775" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8822:8873" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8920:8977" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9283:9408" ph="UPDATE USER_... " />
-            <marker date="1482968509381" expanded="true" signature="9290:9408" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9502:9538" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9674:9716" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9887:9941" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9887:9963" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/rolehome.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1411,7 +1380,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/procfile">
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
@@ -1433,6 +1402,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
