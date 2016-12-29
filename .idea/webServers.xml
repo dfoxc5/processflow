@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="d77da4ff-8848-46d8-a68d-8cbeb783377e" name="heroku" url="http://glacial-hamlet-49803.herokuapp.com/">
+        <fileTransfer host="glacial-hamlet-49803.herokuapp.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
