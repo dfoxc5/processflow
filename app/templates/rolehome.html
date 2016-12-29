@@ -1,0 +1,13 @@
+{% extends "storylistbase.html" %}
+{% block content %}
+    {% for story in stories %}
+        <a href="/stories_home?story={{ story[0] }}&edit=False">
+            <div class="TableRow Row1">
+                <div class="StoryTitle TableCell">{{ story[1] }}</div>
+                <div class="StoryDescription TableCell" title="{{ story[2] }}">
+                    {{ story[2] }}
+                </div>
+            </div>
+        </a>
+    {%  endfor %}
+{% endblock %}

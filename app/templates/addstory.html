@@ -1,0 +1,137 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="Whole">
+        <div class="SearchContainer">
+			<div class="ButtonHolder">
+                <a href="/" class="SingleButton"><button class="SmallButton">Roles</button></a>
+			</div>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="FlashMessages">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+		</div>
+		<div class="StoryHolder">
+            <form action="/upload" method="POST" enctype=multipart/form-data id="storyForm">
+                <div class="AddBox">
+                    <div class="AddTitle">Role(s)</div> <br />
+                    <div class="InputRoleCheck FirstCheckBox">Staff Member</div>
+                    <div class="InputRoleCheck">PO</div>
+                    <div class="InputRoleCheck">Other</div><br />
+                    {% if roles.__len__() > 0 %}
+                        <input class="InputRoleCheck FirstCheckBox CheckBox" type="checkbox" name="role_check_1" {{ roles[0] }}>
+                        <input class="InputRoleCheck CheckBox" type="checkbox" name="role_check_2" {{ roles[1] }}>
+                        <input class="InputRoleCheck CheckBox" type="checkbox" name="role_check_3" {{ roles[2] }}><br />
+                    {% endif %}
+                    {% if roles.__len__() == 0 %}
+                        <input class="InputRoleCheck FirstCheckBox CheckBox" type="checkbox" name="role_check_1">
+                        <input class="InputRoleCheck CheckBox" type="checkbox" name="role_check_2">
+                        <input class="InputRoleCheck CheckBox" type="checkbox" name="role_check_3" checked><br />
+                    {% endif %}
+                </div><br />
+                <div class="AddBox" id="epicBox">
+                    <div class="AddTitle">Containing Epic</div>
+                    <input class="AddInput EpicInput" type="text" name="epic_title" value="{{ epic_title }}" oninput="showList(this);" autocomplete="off"><br /><br />
+                    <datalist id="epicList">
+                        {% for epic in epic_list %}
+                            <option value="{{ epic }}">{{ epic }}</option>
+                        {% endfor %}
+                    </datalist>
+                </div>
+                <div class="AddBox" id="titleBox">
+                    <div class="AddTitle">Title</div>
+                    <input class="AddInput" name="title" value="{{ title }}" autocomplete="off">
+                </div>
+                <div class="AddBox" id="descriptionBox">
+                    <div class="AddTitle">Description</div>
+                    <input class="AddInput" name="description" value="{{ description }}" id="descriptionInput" autocomplete="off">
+                </div>
+                <div class="AddBox" id="assumptionBox">
+                    <div class="AssumptionLine">
+                        <div class="AssumptionInputTitle">Assumptions</div>
+                        <div class="LinkTitle">Story</div>
+                    </div>
+                    {% if assumption_list %}
+                        {% for assumption, link in assumption_list %}
+                            {% if assumption != '' %}
+                                <div class="AssumptionLine">
+                                    <div class="Delete DeleteAssumption" onclick="deleteAssumption(this);">&#9986;</div>
+                                    {% if assumption[2].__len__() > 1 %}
+                                        <input class="AddInput AssumptionInput" name="assumption" value="{{ assumption[2] }}" autocomplete="off">
+                                        <input type="text" name="assumption_link" class="AssumptionLink" oninput="showList(this);" value="{{ assumption[3] }}" autocomplete="off">
+                                    {% endif %}
+                                    {% if assumption[2].__len__() == 1 %}
+                                        <input class="AddInput AssumptionInput" name="assumption" value="{{ assumption }}" autocomplete="off">
+                                        <input type="text" name="assumption_link" class="AssumptionLink" oninput="showList(this);" value="{{ link }}" autocomplete="off">
+                                    {% endif %}
+                                </div>
+                            {% else %}
+                                <div class="AssumptionLine">
+                                    <div class="Delete DeleteAssumption" onclick="deleteAssumption(this);">&#9986;</div>
+                                    <input class="AddInput AssumptionInput" name="assumption" autocomplete="off">
+                                    <input name="assumption_link" class="AssumptionLink" autocomplete="off" oninput="showList(this);">
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    <datalist id="storyList">
+                        {% for story in stories %}
+                            <option value="{{ story }}">{{ story }}</option>
+                        {% endfor %}
+                    </datalist>
+                    <div class="SmallButton CenteredButton2" onclick="addStoryAssumption();" id="addAssumption">
+                        Add Assumption
+                    </div>
+                </div>
+                <div class="AddBox SmallAddBox">
+                    <div class="AddTitle">Workflow Number</div>
+                    <input class="AddInput" name="workflow_num">
+                </div>
+                <div class="AddBox" id="walkthroughAddBox">
+                    <div class="AddTitle">Walkthrough Items</div>
+                    {% for step in steps %}
+                        {% if step %}
+                            <div class="StepLine">
+                                <div class="Delete" onclick="deleteStep(this);">&#9986;</div>
+                                {% if step[3].__len__() > 1 %}
+                                    <input class="AddInput Step" name="step" autocomplete="off" value="{{ step[3] }}">
+                                {% endif %}
+                                {% if step[3].__len__() == 1 %}
+                                    <input class="AddInput Step" name="step" autocomplete="off" value="{{ step }}">
+                                {% endif %}
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                    {% if steps.__len__() < 1 %}
+                        <div class="StepLine">
+                            <div class="Delete" onclick="deleteStep(this);">&#9986;</div>
+                            <input class="AddInput Step" name="step" id="step1" autocomplete="off" placeholder="Step">
+                        </div>
+                    {% endif %}
+                </div>
+                <div class="AddBox DraggingAddBox">
+                    <div class="StepLine DragStepLine">
+                        <div class="AddInput DragToBox" ondragover="allowDrop(event);" ondrop="drop(event);">Drop Here</div>
+                    </div><br /><br />
+{#                    <select class="AddSelect" id="addSelect">#}
+{#                        <option value="Step">Step</option>#}
+{#                        <option value="Note">Note</option>#}
+{#                        <option value="Image">Image</option>#}
+{#                    </select>#}
+{#                    <div class="SmallButton AddButton" onclick="addWorkflowItem();">Add Item</div>#}
+                    <p>Drag These</p>
+                    <div class="DragBox" id="stepDrag" draggable="true" ondragstart="drag(event);">Step</div>
+                    <div class="DragBox" id="noteDrag" draggable="true" ondragstart="drag(event);">Note</div>
+                    <div class="DragBox" id="imageDrag" draggable="true" ondragstart="drag(event);">Image</div>
+                </div>
+                <div class="AddBox LastAddBox">
+                    <input type="submit" value="submit" class="SmallButton CenteredButton" onclick="return checkForm();"/>
+                </div>
+            </form>
+		</div>
+    </div>
+{% endblock %}

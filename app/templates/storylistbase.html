@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="Whole">
+		<div class="SearchContainer">
+			<input id="searchBox" placeholder="Search"><br />
+			<div class="ButtonHolder">
+				<button class="SmallButton" id="searchButton" onclick="searchStories();">Search</button>
+				<a href="/"><button class="SmallButton" id="changeRoleButton">Change Role</button></a>
+			</div>
+		</div>
+
+		<div class="StoryHolder">
+			<div class="StoryTable">
+                <div class="TableHeaderRow TableRow">
+					<div class="StoryTitle TableCell">Story Title</div>
+					<div class="StoryDescription TableCell">Description</div>
+				</div>
+                {% block content %}
+                {% endblock %}
+			</div>
+		</div>
+    </div>
+{% endblock %}

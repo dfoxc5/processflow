@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="Whole">
+		<div class="SearchContainer">
+			<input id="searchBox" placeholder="Search"><br />
+			<div class="ButtonHolder">
+				<button class="SmallButton" id="searchButton" onclick="searchStories();">Search</button>
+				<a href="index.html"><button class="SmallButton" id="changeRoleButton">Change Role</button></a>
+				<button class="SmallButton" id="homeButton" onclick="getHome();">Home</button>
+			</div>
+		</div>
+
+		<div class="StoryHolder">
+			<div class="StoryTable">
+				<div class="TableHeaderRow TableRow">
+					<div class="StoryTitle TableCell">Story Title</div>
+					<div class="StoryDescription TableCell">Description</div>
+				</div>
+				<a onclick="change(this, false);">
+					<div class="TableRow Row1">
+						<div class="StoryTitle TableCell">New Juvenile Intake</div>
+						<div class="StoryDescription TableCell" title="As a PO, I want to intake a new juvenile in order to create a new client and see that client's info on a summary page">
+							As a PO, I want to intake a new juvenile in order to create a new client and
+							see that client's info on a summary page
+						</div>
+					</div>
+				</a>
+				<a onclick="change(this, true);">
+					<div class="TableRow Row2">
+						<div class="StoryTitle TableCell">Viewing a Client</div>
+						<div class="StoryDescription TableCell" title="As a PO, I want to be able to view and edit a selected client's info so that all their data is up-to-date and usable as a reference">
+							As a PO, I want to be able to view and edit a
+							selected client's info so that all their data is up-to-date and usable as a reference
+						</div>
+					</div>
+				</a>
+				<a onclick="change(this, true);">
+					<div class="TableRow Row1">
+						<div class="StoryTitle TableCell">Client Movement</div>
+						<div class="StoryDescription TableCell" title="As a PO, I want to be able to move, and view the movements of, clients so that I can know who is being moved to and from my work location">
+							As a PO, I want to be able to move, and view the movements of, clients so
+							that I can know who is being moved to and from my work location
+						</div>
+					</div>
+				</a>
+				<a onclick="change(this, false);">
+					<div class="TableRow Row2">
+						<div class="StoryTitle TableCell">Adding an Assessment</div>
+						<div class="StoryDescription TableCell" title="As a PO, I want to be able to add an assessment for my selected client so that I can keep that assessment for future reference">
+							As a PO, I want to be able to add an assessment for my selected client
+							so that I can keep that assessment for future reference
+						</div>
+					</div>
+				</a>
+				<a onclick="change(this, true);">
+					<div class="TableRow Row1">
+						<div class="StoryTitle TableCell">Client Property</div>
+						<div class="StoryDescription TableCell" title="As a PO, I want to be able to receive all a client's property and cash, print receipts for the property, and then be able to return all property to the client when ordered">
+							As a PO, I want to be able to receive all a client's property and cash, print receipts for the property,
+							and then be able to return all property to the client when ordered
+						</div>
+					</div>
+				</a>
+				<a onclick="change(this, true);">
+					<div class="TableRow Row2">
+						<div class="StoryTitle TableCell">Detention</div>
+						<div class="StoryDescription TableCell" title="As a PO, I want to be able manage client's time in a detention center from start to finish as well as the detention center information so that everything is recorded for each individual client and for the facility as a whole">
+							As a user, I want to be able manage client's time in a detention
+							center from start to finish as well as the detention center information
+							so that everything is recorded for each individual client and for the
+							facility as a whole
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+{% endblock %}

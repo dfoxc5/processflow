@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="Whole">
+		<div class="SearchContainer">
+			<div class="ButtonHolder">
+				<button class="SmallButton" id="backButton" onclick="goBack();">Back</button>
+				<a href="/"><button class="SmallButton" id="changeRoleButton">Change Role</button></a>
+                <a href="/stories_home?story={{ story_list[0] }}&edit=True">
+                    <button class="SmallButton" id="editButton">Edit</button>
+                </a>
+			</div>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="FlashMessages">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+		</div>
+
+        {% if containing_epics.__len__() != 0 %}
+            <div class="StoryHolder">
+                <p class="StoryHeader EpicHeader"><b>Containing Epic(s)</b></p>
+                <div class="StoryTable EpicTable">
+                    {% for i in range(containing_epics.__len__()) %}
+                        <a href="/stories_home?story={{ containing_epics[i][0] }}">
+                            <div class="TableHeaderRow StoryTableRow EpicRow Epic{{ containing_epics.__len__() - i }}">
+                                <div class="ContainingEpicTitle">{{ containing_epics[i][1] }}</div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+
+		<div class="StoryHolder">
+            {% if epic %}
+                <p class="StoryHeader"><b>Epic</b></p>
+            {% endif %}
+			<div class="StoryTable">
+				<div class="TableHeaderRow StoryTableRow">
+					<div class="StoryTableCell StoryStoryTitle">{{ story_list[1] }}</div>
+					<div class="StoryTableCell StoryDescription">{{ story_list[2] }}</div>
+				</div>
+                {% if story_list[6].__len__() != 0 %}
+                    <div class="TableHeaderRow StoryTableRow StoryAssumptionRow">
+                        <div class="StoryTableCell StoryStoryTitle AssumptionTitle">Assumptions:</div>
+                        <div class="StoryTableCell StoryDescription AssumptionList">
+                            <ul>
+                                {% for assumption in story_list[6] %}
+                                    {% if assumption[3] != 0 %}
+                                        <a href="/stories_home?story={{ assumption[3] }}">
+                                            <li>{{ assumption[2] }}</li>
+                                        </a>
+                                    {% endif %}
+                                    {% if assumption[3] == 0 %}
+                                        <li>{{ assumption[2] }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                {% endif %}
+			</div>
+            {% if epic %}
+                <p class="StoryHeader StoryHeader2"><b>Stories</b></p>
+                <div class="StoryTable">
+                    <div class="TableHeaderRow TableRow">
+                        <div class="StoryTitle TableCell">Story Title</div>
+                        <div class="StoryDescription TableCell">Description</div>
+                    </div>
+                    {% for story in stories %}
+                        <a href="/stories_home?story={{ story[0] }}&edit=False">
+                            <div class="TableRow Row1">
+                                <div class="StoryTitle TableCell">{{ story[1] }}</div>
+                                <div class="StoryDescription TableCell" title="{{ story[2] }}">
+                                    {{ story[2] }}
+                                </div>
+                            </div>
+                        </a>
+                    {%  endfor %}
+                </div>
+            {% endif %}
+            {% if not epic %}
+                <div class="StoryWalkthrough">
+                    {% for step in story_list[5] %}
+                        {% if step[2] == 1 %}
+                            <p class="StoryParagraph">{{ step[3] }}</p>
+                        {% endif %}
+                        {% if step[2] == 2 %}
+                            <p class="StoryParagraph NoteParagraph">{{ step[3] }}</p>
+                        {% endif %}
+                        {% if step[2] == 3 %}
+                            <img class="StoryImage" src="{{ step[3] }}">
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+    </div>
+{% endblock %}

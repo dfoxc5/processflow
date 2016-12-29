@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PIMS Workflow</title>
+	<link rel="stylesheet" type="text/css" href="../static/css/mystyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../static/js/jquery.js"></script>
+	<script type="text/javascript" src="../static/js/myjava.js"></script>
+</head>
+<body onload="addStep();decodeSteps();checkFlash();addImage();addRows();">
+    <div class="Header">
+		<div class="Logo"></div>
+		<div class="Help" onclick="helpPopup('/help', 'help');"></div>
+	</div>
+{% block body %}{% endblock %}
+</body>
+</html>

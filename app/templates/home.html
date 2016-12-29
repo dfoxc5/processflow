@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body %}
+	<div class="Whole">
+		<div class="SearchContainer">
+			<div class="LabelHolder HomeLabel"><h2>Select Role</h2></div>
+			<div class="HomeButtonHolder">
+                {% for role in roles %}
+                    <a href="/roles_home?role={{ role[0] }}"><button class="SmallButton HomeButton">{{ role[1] }}</button></a>
+                {% endfor %}
+                <form action="/add_story" method=get><button class="SmallButton HomeButton" id="indexSelection">Add Story</button></form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,837 @@
+body {
+	background: url(../images/template/main_bg.gif) left top repeat-x #ffffff;
+	font-size: 12px;
+	color: #2E5466;
+	line-height: 16px;
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	overflow-x: hidden
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+.Header {
+	background: url(../images/template/header_bg.gif) left top repeat-x;
+	height: 40px;
+	width: 960px;
+	margin: auto;
+	margin-top: -5px;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #2E5466;
+}
+
+a:hover {
+	cursor: pointer;
+}
+
+.Logo {
+	width: 101px;
+	height: 35px;
+	float: left;
+	background-image: url(../images/template/logo.gif);
+}
+
+.Help {
+	float: right;
+	margin-right: 20px;
+	margin-top: 5px;
+	width: 30px;
+	height: 30px;
+	background: url(../images/template/button_help.gif);
+	background-size: 100%;
+}
+
+.Help:hover {
+	cursor: pointer;
+}
+
+.Whole {
+	width: 940px;
+	margin: auto;
+	background: #b2b2b2;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 75px;
+}
+
+.SmallButton {
+	background: url(../images/template/button_small.gif) top left no-repeat;
+	width: 100px;
+	height: 28px;
+	border: none;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: center;
+	padding: 6px 5px 5px 0;
+	color: #3d3f27;
+}
+
+.SmallButton:hover {
+	cursor: pointer;
+}
+
+.Underlined {
+	text-decoration: underline;
+}
+
+.LabelHolder {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+/*   Role   */
+
+.HomeLabel {
+	font-size: 2.1em;
+}
+
+.HomeButtonHolder {
+	width: 200px;
+	margin: auto;
+}
+
+.HomeButton {
+	background: url(../images/template/button_small.gif) center no-repeat;
+	background-size: 100%;
+	width: 100%;
+	height: 56px;
+	margin-bottom: 20px;
+	font-size: 2em;
+}
+
+#ssSelection {
+	width: 100%;
+}
+
+#poSelection {
+
+}
+
+#otherSelection {
+
+}
+
+
+/*    Home    */
+
+.SearchContainer {
+	width: 887px;
+	margin: auto;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	padding: 20px;
+	background: white;
+}
+
+.SearchContainer2 {
+	width: 887px;
+	margin: auto;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	padding: 20px;
+	background: white;
+}
+
+.NewSearchContainer {
+	width: 885px;
+	padding: 20px;
+	background: white;
+	position: fixed;
+	top: 0;
+	border: 2px solid grey;
+	z-index: 1;
+}
+
+#searchBox {
+	border: 1px solid #abaf9f;
+	width: 400px;
+	margin: auto;
+	height: 26px;
+	display: block;
+}
+
+.ButtonHolder {
+	width: 500px;
+	margin: auto;
+	min-height: 28px;
+}
+
+#searchButton {
+	float: left;
+	display: inline-block;
+}
+
+#changeRoleButton {
+	float: right;
+}
+
+#homeButton {
+	float: right;
+	display: inline-block;
+}
+
+#editButton {
+	margin-left: 100px;
+}
+
+#saveButton {
+	float: left;
+}
+
+#topHome {
+	float: right;
+}
+
+.StoryHolder {
+	width: 887px;
+	margin: auto;
+	background: white;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+.StoryTable {
+	width: 850px;
+	margin: auto;
+}
+
+.EpicTable {
+	width: 400px;
+}
+
+.TableHeaderRow {
+	background-color: #a9be9c;
+}
+
+.TableRow {
+	height: 25px;
+}
+
+.EpicRow {
+	margin: auto;
+	margin-top: 20px;
+}
+
+.Row1 div {
+	background-color: white;
+}
+
+.Row2 div {
+	background-color: #F2F2F2;
+}
+
+.StoryTitle {
+	width: 250px;
+	float: left;
+}
+
+.TableCell {
+	border: 1px solid grey;
+	height: 23px;
+	line-height: 23px;
+	padding-left: 4px;
+	overflow: hidden;
+}
+
+.TableRow:hover {
+	cursor: pointer;
+}
+
+.ToolTip {
+	width: 400px;
+	color: white;
+	text-align: left;
+	display:none;
+	position:absolute;
+	top: 0;
+	left: 0;
+	background-color:#1f4011;
+	border-radius:5px;
+	padding:10px;
+}
+
+
+/*   Stories   */
+
+#backButton {
+	float: left;
+	display: inline-block;
+}
+
+.StoryHeader {
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+}
+
+.StoryHeader2 {
+	font-size: 1.5em;
+}
+
+.EpicHeader {
+	font-size: 2.2em;
+}
+
+.StoryTableRow {
+	font-weight: bold;
+	border: 1px solid grey;
+}
+
+.Epic4 {
+	width: 250px;
+	font-size: .7em;
+}
+
+.Epic3 {
+	width: 300px;
+	font-size: .8em;
+}
+
+.Epic2 {
+	width: 350px;
+	font-size: .9em;
+}
+
+.Epic1 {
+	width: 400px;
+	font-size: 1em;
+}
+
+.StoryTableCell {
+	line-height: 25px;
+	padding-left: 10px;
+	overflow: hidden;
+	font-size: larger;
+}
+
+.StoryStoryTitle {
+	float: left;
+	line-height: 25px;
+	width: 244px;
+}
+
+.AssumptionTitle {
+	line-height: 45px;
+}
+
+.StorySpecialTitle {
+	line-height: 25px;
+}
+
+.ContainingEpicTitle {
+	font-size: 1.8em;
+	text-align: center;
+	text-decoration: underline;
+	padding: 10px;
+}
+
+.ContainingEpicTitle:hover {
+	cursor: pointer;
+}
+
+.StoryDescription {
+	border-left: 1px solid grey;
+}
+
+.StoryWalkthrough {
+	width: 850px;
+	margin: auto;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.StoryParDiv {
+	width: 100%;
+	margin-top: 40px;
+}
+
+.StoryParagraph {
+	margin: auto;
+	margin-top: 40px;
+	font-size: larger;
+	width: 50%;
+	text-align: center;
+}
+
+.StoryStep {
+	margin-left: 5%;
+	margin-top: 40px;
+	margin-bottom: 0;
+	font-size: larger;
+	width: 15%;
+	float: left;
+	text-align: left;
+}
+
+.StoryStep1 {
+	margin-top: 0;
+}
+
+.StoryImage {
+	width: 850px;
+	margin: auto;
+	margin-top: 40px;
+}
+
+.ConfirmImage {
+	 width: 350px;
+}
+
+.ArrowDown {
+	width: 30px;
+	margin: auto;
+	margin-top: 40px;
+}
+
+.StoryAssumptionRow {
+	margin-bottom: 30px;
+}
+
+.StoryAssumptionRow div {
+	font-size: 1em !important;
+}
+
+.AssumptionList ul {
+	padding-left: 15px;
+}
+
+/* Help window */
+
+#helpTitle {
+	font-size: 2em;
+}
+
+.HelpHeaderCell {
+	line-height: 25px;
+	padding-left: 2px;
+	overflow: hidden;
+	font-size: larger;
+}
+
+.HelpRow {
+	height: 25px;
+}
+
+.IconImage {
+	height: 25px;
+}
+
+/* LifeCycle */
+
+.HeaderLifeCycle {
+	width: 1590px;
+}
+
+.WholeLifeCycle {
+	width: 1570px;
+}
+
+.LifeCycleHolder {
+	width: 1470px;
+	height: 625px;
+}
+
+.LifeCycleTable {
+	width: 970px;
+	height: 600px;
+	border: 1px solid grey;
+	float: left;
+	padding-top: 10px;
+	overflow: scroll;
+	margin-left: 30px;
+}
+
+.SideBar {
+	width: 375px;
+	height: 600px;
+	border: 1px solid grey;
+	margin-right: -10px;
+	float: right;
+	padding-top: 10px;
+	overflow: scroll;
+}
+
+.Left {
+	float: left;
+	margin-right: 0;
+	width: 80px;
+	overflow: hidden;
+}
+
+.LifeCycleBlock {
+	width: 235px;
+	margin-left: 10px;
+	height: 125px;
+	padding-top: 10px;
+	float: left;
+}
+
+.End {
+	width: 200px;
+}
+
+.LifeCycleCell {
+	border: 1px solid grey;
+	width: 150px;
+	float: left;
+	height: 50px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	font-size: larger;
+	font-weight: bolder;
+}
+
+.DirectionCell {
+	width: 60px;
+	margin-bottom: 0;
+}
+
+.Bottom {
+	margin-top: 5px;
+	margin-left: 65px;
+}
+
+.LifeCycleCell2 {
+	float: left;
+	margin: 10px;
+}
+
+.Left div {
+	float: none;
+	margin: auto;
+	margin-top: 10px;
+}
+
+.DirectionImage {
+	width: 60px;
+	height: 50px;
+}
+
+.Output {
+	width: 95%;
+	float: none;
+	margin: auto;
+}
+
+/* Life Process */
+
+.LifeProcessWhole {
+	height: 600px;
+	overflow-y: scroll;
+}
+
+.RefreshButton {
+	float: right;
+}
+
+.LifeProcessCell {
+	height: 40px;
+	width: 150px;
+	text-align: center;
+	border: 1px solid grey;
+	-webkit-transition: height 0.5s, width 0.5s, color 0.5s, background 0.5s;
+	transition: height 0.5s, width 0.5s, color 0.5s, background 0.5s;
+	-webkit-transition-timing-function: ease;
+}
+
+.NoTransition {
+	-webkit-transition: height 0.0s, width 0.0s;
+	transition: height 0.0s, width 0.0s;
+	-webkit-transition-timing-function: ease;
+}
+
+.LifeProcessCell:hover {
+	cursor: pointer;
+}
+
+.Single {
+	margin: auto;
+}
+
+.DoubleHolder {
+	border: 0;
+	width: 430px;
+	margin: auto;
+}
+
+.DoubleHolder:hover {
+	cursor: default;
+}
+
+.LeftStandAlone {
+	float: left;
+	position: relative;
+}
+
+.DL {
+	float: left;
+	margin-left: 10px;
+}
+
+.DR {
+	float: left;
+}
+
+.LineDown {
+	width: 0;
+	border: 1px solid grey;
+	height: 40px;
+	margin: auto;
+}
+
+.AfterDouble {
+	position: relative;
+	top: 20px;
+	height: 60px;
+	-webkit-transition: height 0.5s, width 0.5s;
+	transition: height 0.5s, width 0.5s;
+	-webkit-transition-timing-function: ease;
+}
+
+.AfterDoubleLine {
+	margin-top: 20px;
+}
+
+.BeforeDouble {
+	height: 60px;
+	margin-bottom: -20px;
+}
+
+.LineSide {
+	width: 104px;
+	border: 1px solid grey;
+	height: 0;
+	float: left;
+	margin-top: 20px;
+}
+
+.DoubleOuter {
+	margin-left: 229px;
+}
+
+.LeftStandAloneLine {
+	float: left;
+	position: relative;
+	left: 6px;
+}
+
+.Hidden {
+	display: none;
+}
+
+.WorkflowLink:hover {
+	cursor: pointer;
+}
+
+.DoubleText {
+	position: relative;
+	top: -7px;
+}
+
+#blocker {
+	width: 887px;
+	height: 600px;
+	z-index: -2;
+	position: fixed;
+}
+
+.Optional {
+	border: 2px dotted;
+}
+
+/* For Adding Stories */
+.AddBox {
+	width: 400px;
+	margin: auto;
+	margin-top: 25px;
+}
+
+.DraggingAddBox {
+	text-align: center;
+	margin-top: 5px;
+}
+
+.DragBox {
+	border: 1px solid black;
+	height: 20px;
+	width: 100px;
+	font-size: 1.5em;
+	text-align: center;
+	display: inline-block;
+	margin: 5px;
+	padding-top: 5px;
+}
+
+.LastAddBox {
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+
+.SmallAddBox {
+	width: 200px;
+}
+
+.AddTitle {
+	text-align: center;
+}
+
+.InputRoleCheck {
+	float: left;
+	width: 75px;
+	height: 25px;
+	margin-right: 20px;
+	margin-left: 20px;
+	text-align: center;
+}
+
+.FirstCheckBox {
+	margin-left: 50px;
+}
+
+.CheckBox {
+	position: relative;
+	left: 2px;
+}
+
+.AddInput {
+	width: 100%;
+	margin: auto;
+	margin-top: 5px;
+	padding-left: 5px;
+}
+
+.DragToBox {
+	border: 2px solid lightgrey;
+	background: lightgrey;
+	height: 20px;
+	width: 100%;
+	position: relative;
+	top: 18px;
+	color: grey;
+	font-size: 1.4em;
+	text-align: center;
+}
+
+#walkthroughAddBox .AddInput {
+	margin-top: -4px;
+}
+
+.AssumptionInput {
+	width: 50%;
+	display: inline-block;
+}
+
+.AssumptionLink {
+	width: 45%;
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.StepLine {
+	width: 100%;
+	height: 25px;
+}
+
+.ImageInput {
+	margin-left: 125px;
+}
+
+#assumptionBox {
+	width: 600px;
+}
+
+.AssumptionLine {
+	width: 100%;
+	height: 35px;
+}
+
+.AssumptionInputTitle {
+	width: 50%;
+	text-align: center;
+	line-height: 45px;
+	display: inline-block;
+}
+
+.LinkTitle {
+	width: 45%;
+	text-align: center;
+	line-height: 45px;
+	display: inline-block;
+}
+
+.RoleSelect {
+	margin-left: 150px;
+}
+
+.AddSelect {
+	float: left;
+	margin-left: 150px;
+	width: 100px;
+	height: 30px;
+}
+
+.AddButton {
+	float: right;
+	margin-right: 20px;
+}
+
+.CenteredButton {
+	position: relative;
+	left: 153px;
+	top: 10px;
+}
+
+.CenteredButton2 {
+	position: relative;
+	left: 253px;
+	top: 30px;
+	margin-bottom: 35px;
+}
+
+.FlashMessages {
+	width: 100%;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	background: red;
+	text-align: center;
+	font-size: larger;
+	margin-top: 10px;
+	opacity: 0;
+	color: white;
+	transition: visibility 1s;
+	-webkit-transition: opacity 1s, height 1s linear;
+	-webkit-transition-timing-function: ease-out;
+}
+
+.SingleButton {
+	margin-left: 40%;
+}
+
+.Delete {
+	font-size: 1.8em;
+	position: relative;
+	left: -30px;
+	top: 18px;
+	width: 20px;
+}
+
+.DeleteAssumption {
+	top: 22px;
+}
+
+.Delete:hover {
+	cursor: pointer;
+}
+
+input::-webkit-calendar-picker-indicator {
+	display: none;
+}
