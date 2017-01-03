@@ -20,7 +20,7 @@ class DatabaseManager:
 
     @staticmethod
     def get_roles():
-        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
+        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
         # db = sqlite3.connect('testDB.db')
         data = db.cursor()
         data.execute('SELECT * FROM ROLES')
@@ -29,7 +29,7 @@ class DatabaseManager:
 
     @staticmethod
     def get_all_stories():
-        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
+        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         data.execute('SELECT story_title FROM USER_STORIES')
         temp = data.fetchall()
@@ -40,7 +40,7 @@ class DatabaseManager:
 
     @staticmethod
     def get_all_epics():
-        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
+        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         data.execute('SELECT * FROM USER_STORIES')
         temp = data.fetchall()
@@ -54,7 +54,7 @@ class DatabaseManager:
         return epics
 
     def get_stories(self, epic):
-        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
+        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         story_list = []
         if epic == '0':
@@ -165,7 +165,7 @@ class DatabaseManager:
             role_num += 1
 
     def save_story(self, roles, epic_title, title, description, assumptions, linked_stories, workflow, steps):
-        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
+        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         epic_title = self.get_epic(epic_title, data)
         story_id = self.create_user_story(title, description, workflow, epic_title, data)
@@ -178,7 +178,7 @@ class DatabaseManager:
         db.commit()
 
     def get_story(self, story_id):
-        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
+        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         story_id = str(story_id)
         mysql = "SELECT * FROM USER_STORIES WHERE story_id = " + story_id
@@ -203,7 +203,7 @@ class DatabaseManager:
 
     @staticmethod
     def check_story(title):
-        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
+        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         title = str(title)
         mysql = "SELECT * FROM USER_STORIES WHERE story_title='" + title + "'"
@@ -215,7 +215,7 @@ class DatabaseManager:
             return False
 
     def get_containing_epics(self, story_id):
-        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
+        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         story_id = str(story_id)
         containing_epics = []
@@ -229,7 +229,7 @@ class DatabaseManager:
 
     @staticmethod
     def delete_story(story_id):
-        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
+        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         story_id = str(story_id)
         mysql = "DELETE FROM USER_STORIES WHERE story_id='" + story_id + "'"
@@ -242,7 +242,7 @@ class DatabaseManager:
         data.execute(mysql)
 
     def update_story(self, story):
-        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
+        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         if story[3] == 'None' or story[3] == '':
             story[3] = None
