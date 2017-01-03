@@ -20,8 +20,8 @@ class DatabaseManager:
 
     @staticmethod
     def get_roles():
-        # db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
-        db = sqlite3.connect('testDB.db')
+        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
+        # db = sqlite3.connect('testDB.db')
         data = db.cursor()
         data.execute('SELECT * FROM ROLES')
         roles = data.fetchall()
@@ -29,7 +29,7 @@ class DatabaseManager:
 
     @staticmethod
     def get_all_stories():
-        db = sqlite3.connect('testDB.db')
+        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         data.execute('SELECT story_title FROM USER_STORIES')
         temp = data.fetchall()
@@ -40,7 +40,7 @@ class DatabaseManager:
 
     @staticmethod
     def get_all_epics():
-        db = sqlite3.connect('testDB.db')
+        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         data.execute('SELECT * FROM USER_STORIES')
         temp = data.fetchall()
@@ -54,7 +54,7 @@ class DatabaseManager:
         return epics
 
     def get_stories(self, epic):
-        db = sqlite3.connect('testDB.db')
+        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         story_list = []
         if epic == '0':
@@ -117,8 +117,8 @@ class DatabaseManager:
         if name != '':
             if description != '':
                 try:
-                    data.execute("INSERT INTO USER_STORIES (story_title, description, containing_epic, workflow_id) VALUES (?, ?, ?, ?)", (name, description, epic_title, workflow))
-                    userstory_id = data.lastrowid
+                    data.execute('INSERT INTO USER_STORIES (story_title, description, containing_epic, workflow_id) VALUES (%s, %s, %s, %s) RETURNING story_id', (name, description, epic_title, workflow))
+                    userstory_id = data.fetchone()[0]
                 except sqlite3.IntegrityError:
                     return "This story already exists"
         return userstory_id
@@ -135,7 +135,7 @@ class DatabaseManager:
                     link = data.fetchone()[0]
                 else:
                     link = 0
-                data.execute("INSERT INTO ASSUMPTIONS (story_id, assumption, containing_story) VALUES (?, ?, ?)", (story_id, assumption, link))
+                data.execute("INSERT INTO ASSUMPTIONS (story_id, assumption, containing_story) VALUES (%s, %s, %s)", (story_id, assumption, link))
 
     def create_steps(self, story_id, story_title, steps, data):
         story_id = str(story_id)
@@ -151,7 +151,7 @@ class DatabaseManager:
                     step_type = 2
                 else:
                     step_type = 1
-                data.execute("INSERT INTO STEPS (story_id, type, content, step_num) VALUES (?, ?, ?, ?)", (story_id, step_type, step, step_num))
+                data.execute('INSERT INTO STEPS (story_id, type, content, step_num) VALUES (%s, %s, %s, %s)', (story_id, step_type, step, step_num))
                 step_num += 1
 
     @staticmethod
@@ -161,11 +161,11 @@ class DatabaseManager:
         for role in roles:
             if role == 'checked':
                 role_id = role_num
-                data.execute("INSERT INTO ROLE_STORIES (role_id, story_id) VALUES (?, ?)", (role_id, story_id))
+                data.execute("INSERT INTO ROLE_STORIES (role_id, story_id) VALUES (%s, %s)", (role_id, story_id))
             role_num += 1
 
     def save_story(self, roles, epic_title, title, description, assumptions, linked_stories, workflow, steps):
-        db = sqlite3.connect('testDB.db')
+        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         epic_title = self.get_epic(epic_title, data)
         story_id = self.create_user_story(title, description, workflow, epic_title, data)
@@ -178,7 +178,7 @@ class DatabaseManager:
         db.commit()
 
     def get_story(self, story_id):
-        db = sqlite3.connect('testDB.db')
+        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         story_id = str(story_id)
         mysql = "SELECT * FROM USER_STORIES WHERE story_id = " + story_id
@@ -203,7 +203,7 @@ class DatabaseManager:
 
     @staticmethod
     def check_story(title):
-        db = sqlite3.connect('testDB.db')
+        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         title = str(title)
         mysql = "SELECT * FROM USER_STORIES WHERE story_title='" + title + "'"
@@ -215,7 +215,7 @@ class DatabaseManager:
             return False
 
     def get_containing_epics(self, story_id):
-        db = sqlite3.connect('testDB.db')
+        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         story_id = str(story_id)
         containing_epics = []
@@ -229,7 +229,7 @@ class DatabaseManager:
 
     @staticmethod
     def delete_story(story_id):
-        db = sqlite3.connect('testDB.db')
+        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         story_id = str(story_id)
         mysql = "DELETE FROM USER_STORIES WHERE story_id='" + story_id + "'"
@@ -242,18 +242,18 @@ class DatabaseManager:
         data.execute(mysql)
 
     def update_story(self, story):
-        db = sqlite3.connect('testDB.db')
+        db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
         data = db.cursor()
         if story[3] == 'None' or story[3] == '':
             story[3] = None
         if story[4] == 'None' or story[4] == '':
             story[4] = None
-        mysql = "UPDATE USER_STORIES SET story_title=?, description=?, containing_epic=?, workflow_id=? WHERE story_id='" + str(story[0]) + "'"
+        mysql = "UPDATE USER_STORIES SET story_title=%s, description=%s, containing_epic=%s, workflow_id=%s WHERE story_id='" + str(story[0]) + "'"
         data.execute(mysql, (story[1], story[2], story[3], story[4]))
-        data.execute("DELETE FROM STEPS WHERE story_id = ?", str(story[0]))
+        data.execute("DELETE FROM STEPS WHERE story_id = %s", str(story[0]))
         if len(story[5]) > 0:
             self.create_steps(story[0], story[1], story[5], data)
-        data.execute("DELETE FROM ASSUMPTIONS WHERE story_id = ?", str(story[0]))
+        data.execute("DELETE FROM ASSUMPTIONS WHERE story_id = %s", str(story[0]))
         if len(story[6]) > 0:
             self.create_assumptions(story[0], story[6], story[7], data)
         if len(story[8]) > 0:

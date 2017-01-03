@@ -729,7 +729,7 @@ a:hover {
 }
 
 .AssumptionInput {
-	width: 50%;
+	width: 48%;
 	display: inline-block;
 }
 
@@ -847,4 +847,16 @@ input::-webkit-calendar-picker-indicator {
 	background: lightgrey;
 	width: 102%;
 	z-index: 1;
+}
+
+.AddStepButton {
+	width: 30%;
+	text-align: center;
+	float: left;
+	font-size: larger;
+	margin-left: 2%;
+}
+
+.AddStepButton:hover {
+	cursor: pointer;
 }

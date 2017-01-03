@@ -95,7 +95,8 @@
                     <div class="AddTitle">Walkthrough Items</div>
                     {% for step in steps %}
                         {% if step %}
-                            <div class="StepLine">
+                            <div class="StepLine Between DragStepLine" ondragover="allowDrop(event);" ondrop="drop(event);"></div>
+                            <div class="StepLine" id="stepLine{{ steps.index(step) }}" draggable="true" ondragstart="drag(event);">
                                 <div class="Delete" onclick="deleteStep(this);">&#9986;</div>
                                 {% if step[3].__len__() > 1 %}
                                     <input class="AddInput Step" name="step" autocomplete="off" value="{{ step[3] }}">
@@ -113,22 +114,27 @@
                             <input class="AddInput Step" name="step" id="step1" autocomplete="off" placeholder="Step">
                         </div>
                     {% endif %}
-                    <div class="StepLine DragStepLine">
-                        <div class="DragToBox" ondragover="allowDrop(event);" ondrop="drop(event);">Drop Here</div>
-                    </div><br /><br />
+                    <div class="StepLine LastStepLine">
+                        <div class="AddStepButton" id="stepButton" onclick="addWalkthroughStep(this)">Step</div>
+                        <div class="AddStepButton" id="noteButton" onclick="addWalkthroughStep(this)">Note</div>
+                        <div class="AddStepButton" id="imageButton" onclick="addWalkthroughStep(this)">Image</div>
+                    </div>
+{#                    <div class="StepLine DragStepLine">#}
+{#                        <div class="DragToBox" ondragover="allowDrop(event);" ondrop="drop(event);">Drop Here</div>#}
+{#                    </div><br /><br />#}
                 </div>
-                <div class="AddBox DraggingAddBox">
+{#                <div class="AddBox DraggingAddBox">#}
 {#                    <select class="AddSelect" id="addSelect">#}
 {#                        <option value="Step">Step</option>#}
 {#                        <option value="Note">Note</option>#}
 {#                        <option value="Image">Image</option>#}
 {#                    </select>#}
 {#                    <div class="SmallButton AddButton" onclick="addWorkflowItem();">Add Item</div>#}
-                    <p>Drag These</p>
-                    <div class="DragBox" id="stepDrag" draggable="true" ondragstart="drag(event);">Step</div>
-                    <div class="DragBox" id="noteDrag" draggable="true" ondragstart="drag(event);">Note</div>
-                    <div class="DragBox" id="imageDrag" draggable="true" ondragstart="drag(event);">Image</div>
-                </div>
+{#                    <p>Drag These</p>#}
+{#                    <div class="DragBox" id="stepDrag" draggable="true" ondragstart="drag(event);">Step</div>#}
+{#                    <div class="DragBox" id="noteDrag" draggable="true" ondragstart="drag(event);">Note</div>#}
+{#                    <div class="DragBox" id="imageDrag" draggable="true" ondragstart="drag(event);">Image</div>#}
+{#                </div>#}
                 <div class="AddBox LastAddBox">
                     <input type="submit" value="submit" class="SmallButton CenteredButton" onclick="return checkForm();"/>
                 </div>
