@@ -21,12 +21,16 @@ class DatabaseManager:
 
     @staticmethod
     def get_roles():
-        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
+        db = psycopg2.connect("host='ec2-54-235-240-92.compute-1.amazonaws.com' dbname='ddngvqc9ukuv3r' "
+                              "user='ropaaaswqzbtxr' password='908bf747bb815f15bd1f79e9cdc435bd2e96b50c54ff59798e603eecb0c1ddea'")
         # db = sqlite3.connect('testDB.db')
         data = db.cursor()
         data.execute('SELECT * FROM ROLES')
         roles = data.fetchall()
-        return roles
+        if roles:
+            return roles
+        else:
+            return 0
 
     @staticmethod
     def get_all_stories():

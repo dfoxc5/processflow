@@ -194,38 +194,38 @@
       <file leaf-file-name="databaseManager.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/databaseManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+            <state relative-caret-position="544">
+              <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1483482547613" expanded="true" signature="272:320" ph="SELECT ROLES... ROLES" />
-                <marker date="1483482547613" expanded="true" signature="666:685" ph="SELECT * FRO... ROLES" />
-                <marker date="1483482547613" expanded="true" signature="938:974" ph="SELECT story... USER_STORIES" />
-                <marker date="1483482547613" expanded="true" signature="1311:1337" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1483482547613" expanded="true" signature="1441:1502" ph="SELECT * FRO... STEPS" />
-                <marker date="1483482547613" expanded="true" signature="2001:2057" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1483482547613" expanded="true" signature="2167:2241" ph="SELECT ROLE_... ROLE_STORIES" />
-                <marker date="1483482547613" expanded="true" signature="2428:2520" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1483482547613" expanded="true" signature="3050:3099" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1483482547613" expanded="true" signature="3445:3543" ph="SELECT USER_... USER_STORIES" />
-                <marker date="1483482547613" expanded="true" signature="4221:4345" ph="INSERT INTO USER_STORIES... " />
-                <marker date="1483482547613" expanded="true" signature="4884:4954" ph="SELECT story... USER_STORIES" />
-                <marker date="1483482547613" expanded="true" signature="5123:5207" ph="INSERT INTO ASSUMPTIONS... " />
-                <marker date="1483482547613" expanded="true" signature="5877:5954" ph="INSERT INTO STEPS... " />
-                <marker date="1483482547613" expanded="true" signature="6275:6335" ph="INSERT INTO ROLE_STORIES... " />
-                <marker date="1483482547613" expanded="true" signature="7296:7340" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1483482547613" expanded="true" signature="7694:7731" ph="SELECT * FRO... STEPS" />
-                <marker date="1483482547613" expanded="true" signature="7854:7897" ph="SELECT * FRO... ASSUMPTIONS" />
-                <marker date="1483482547613" expanded="true" signature="8298:8358" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1483482547613" expanded="true" signature="8757:8799" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1483482547613" expanded="true" signature="9264:9322" ph="DELETE FROM " />
-                <marker date="1483482547613" expanded="true" signature="9369:9427" ph="DELETE FROM " />
-                <marker date="1483482547613" expanded="true" signature="9474:9525" ph="DELETE FROM " />
-                <marker date="1483482547613" expanded="true" signature="9572:9629" ph="DELETE FROM " />
-                <marker date="1483482547613" expanded="true" signature="9995:10124" ph="UPDATE USER_... " />
-                <marker date="1483482547613" expanded="true" signature="10218:10255" ph="DELETE FROM " />
-                <marker date="1483482547613" expanded="true" signature="10391:10434" ph="DELETE FROM " />
-                <marker date="1483482547613" expanded="true" signature="10605:10681" ph="DELETE FROM " />
+                <marker date="1483482910160" expanded="true" signature="272:320" ph="SELECT ROLES... ROLES" />
+                <marker date="1483482910160" expanded="true" signature="801:820" ph="SELECT * FRO... ROLES" />
+                <marker date="1483482910160" expanded="true" signature="1130:1166" ph="SELECT story... USER_STORIES" />
+                <marker date="1483482910160" expanded="true" signature="1503:1529" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483482910160" expanded="true" signature="1633:1694" ph="SELECT * FRO... STEPS" />
+                <marker date="1483482910160" expanded="true" signature="2193:2249" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483482910160" expanded="true" signature="2359:2433" ph="SELECT ROLE_... ROLE_STORIES" />
+                <marker date="1483482910160" expanded="true" signature="2620:2712" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483482910160" expanded="true" signature="3242:3291" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483482910160" expanded="true" signature="3637:3735" ph="SELECT USER_... USER_STORIES" />
+                <marker date="1483482910160" expanded="true" signature="4413:4537" ph="INSERT INTO USER_STORIES... " />
+                <marker date="1483482910160" expanded="true" signature="5076:5146" ph="SELECT story... USER_STORIES" />
+                <marker date="1483482910160" expanded="true" signature="5315:5399" ph="INSERT INTO ASSUMPTIONS... " />
+                <marker date="1483482910160" expanded="true" signature="6069:6146" ph="INSERT INTO STEPS... " />
+                <marker date="1483482910160" expanded="true" signature="6467:6527" ph="INSERT INTO ROLE_STORIES... " />
+                <marker date="1483482910160" expanded="true" signature="7488:7532" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483482910160" expanded="true" signature="7886:7923" ph="SELECT * FRO... STEPS" />
+                <marker date="1483482910160" expanded="true" signature="8046:8089" ph="SELECT * FRO... ASSUMPTIONS" />
+                <marker date="1483482910160" expanded="true" signature="8490:8550" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483482910160" expanded="true" signature="8949:8991" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483482910160" expanded="true" signature="9456:9514" ph="DELETE FROM " />
+                <marker date="1483482910160" expanded="true" signature="9561:9619" ph="DELETE FROM " />
+                <marker date="1483482910160" expanded="true" signature="9666:9717" ph="DELETE FROM " />
+                <marker date="1483482910160" expanded="true" signature="9764:9821" ph="DELETE FROM " />
+                <marker date="1483482910160" expanded="true" signature="10187:10316" ph="UPDATE USER_... " />
+                <marker date="1483482910160" expanded="true" signature="10410:10447" ph="DELETE FROM " />
+                <marker date="1483482910160" expanded="true" signature="10583:10626" ph="DELETE FROM " />
+                <marker date="1483482910160" expanded="true" signature="10797:10873" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -974,7 +974,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/databaseManager.py</url>
-          <line>168</line>
+          <line>172</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
@@ -1045,34 +1045,34 @@
           <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1483482547613" expanded="true" signature="272:320" ph="SELECT ROLES... ROLES" />
-            <marker date="1483482547613" expanded="true" signature="666:685" ph="SELECT * FRO... ROLES" />
-            <marker date="1483482547613" expanded="true" signature="938:974" ph="SELECT story... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="1311:1337" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="1441:1502" ph="SELECT * FRO... STEPS" />
-            <marker date="1483482547613" expanded="true" signature="2001:2057" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="2167:2241" ph="SELECT ROLE_... ROLE_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="2428:2520" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="3050:3099" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="3445:3543" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="4221:4345" ph="INSERT INTO USER_STORIES... " />
-            <marker date="1483482547613" expanded="true" signature="4884:4954" ph="SELECT story... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="5123:5207" ph="INSERT INTO ASSUMPTIONS... " />
-            <marker date="1483482547613" expanded="true" signature="5877:5954" ph="INSERT INTO STEPS... " />
-            <marker date="1483482547613" expanded="true" signature="6275:6335" ph="INSERT INTO ROLE_STORIES... " />
-            <marker date="1483482547613" expanded="true" signature="7296:7340" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="7694:7731" ph="SELECT * FRO... STEPS" />
-            <marker date="1483482547613" expanded="true" signature="7854:7897" ph="SELECT * FRO... ASSUMPTIONS" />
-            <marker date="1483482547613" expanded="true" signature="8298:8358" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="8757:8799" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="9264:9322" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="9369:9427" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="9474:9525" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="9572:9629" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="9995:10124" ph="UPDATE USER_... " />
-            <marker date="1483482547613" expanded="true" signature="10218:10255" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="10391:10434" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="10605:10681" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="272:320" ph="SELECT ROLES... ROLES" />
+            <marker date="1483482910160" expanded="true" signature="801:820" ph="SELECT * FRO... ROLES" />
+            <marker date="1483482910160" expanded="true" signature="1130:1166" ph="SELECT story... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="1503:1529" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="1633:1694" ph="SELECT * FRO... STEPS" />
+            <marker date="1483482910160" expanded="true" signature="2193:2249" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="2359:2433" ph="SELECT ROLE_... ROLE_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="2620:2712" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="3242:3291" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="3637:3735" ph="SELECT USER_... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="4413:4537" ph="INSERT INTO USER_STORIES... " />
+            <marker date="1483482910160" expanded="true" signature="5076:5146" ph="SELECT story... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="5315:5399" ph="INSERT INTO ASSUMPTIONS... " />
+            <marker date="1483482910160" expanded="true" signature="6069:6146" ph="INSERT INTO STEPS... " />
+            <marker date="1483482910160" expanded="true" signature="6467:6527" ph="INSERT INTO ROLE_STORIES... " />
+            <marker date="1483482910160" expanded="true" signature="7488:7532" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="7886:7923" ph="SELECT * FRO... STEPS" />
+            <marker date="1483482910160" expanded="true" signature="8046:8089" ph="SELECT * FRO... ASSUMPTIONS" />
+            <marker date="1483482910160" expanded="true" signature="8490:8550" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="8949:8991" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="9456:9514" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="9561:9619" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="9666:9717" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="9764:9821" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="10187:10316" ph="UPDATE USER_... " />
+            <marker date="1483482910160" expanded="true" signature="10410:10447" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="10583:10626" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="10797:10873" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1142,34 +1142,34 @@
           <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1483482547613" expanded="true" signature="272:320" ph="SELECT ROLES... ROLES" />
-            <marker date="1483482547613" expanded="true" signature="666:685" ph="SELECT * FRO... ROLES" />
-            <marker date="1483482547613" expanded="true" signature="938:974" ph="SELECT story... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="1311:1337" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="1441:1502" ph="SELECT * FRO... STEPS" />
-            <marker date="1483482547613" expanded="true" signature="2001:2057" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="2167:2241" ph="SELECT ROLE_... ROLE_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="2428:2520" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="3050:3099" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="3445:3543" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="4221:4345" ph="INSERT INTO USER_STORIES... " />
-            <marker date="1483482547613" expanded="true" signature="4884:4954" ph="SELECT story... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="5123:5207" ph="INSERT INTO ASSUMPTIONS... " />
-            <marker date="1483482547613" expanded="true" signature="5877:5954" ph="INSERT INTO STEPS... " />
-            <marker date="1483482547613" expanded="true" signature="6275:6335" ph="INSERT INTO ROLE_STORIES... " />
-            <marker date="1483482547613" expanded="true" signature="7296:7340" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="7694:7731" ph="SELECT * FRO... STEPS" />
-            <marker date="1483482547613" expanded="true" signature="7854:7897" ph="SELECT * FRO... ASSUMPTIONS" />
-            <marker date="1483482547613" expanded="true" signature="8298:8358" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="8757:8799" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="9264:9322" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="9369:9427" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="9474:9525" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="9572:9629" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="9995:10124" ph="UPDATE USER_... " />
-            <marker date="1483482547613" expanded="true" signature="10218:10255" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="10391:10434" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="10605:10681" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="272:320" ph="SELECT ROLES... ROLES" />
+            <marker date="1483482910160" expanded="true" signature="801:820" ph="SELECT * FRO... ROLES" />
+            <marker date="1483482910160" expanded="true" signature="1130:1166" ph="SELECT story... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="1503:1529" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="1633:1694" ph="SELECT * FRO... STEPS" />
+            <marker date="1483482910160" expanded="true" signature="2193:2249" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="2359:2433" ph="SELECT ROLE_... ROLE_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="2620:2712" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="3242:3291" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="3637:3735" ph="SELECT USER_... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="4413:4537" ph="INSERT INTO USER_STORIES... " />
+            <marker date="1483482910160" expanded="true" signature="5076:5146" ph="SELECT story... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="5315:5399" ph="INSERT INTO ASSUMPTIONS... " />
+            <marker date="1483482910160" expanded="true" signature="6069:6146" ph="INSERT INTO STEPS... " />
+            <marker date="1483482910160" expanded="true" signature="6467:6527" ph="INSERT INTO ROLE_STORIES... " />
+            <marker date="1483482910160" expanded="true" signature="7488:7532" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="7886:7923" ph="SELECT * FRO... STEPS" />
+            <marker date="1483482910160" expanded="true" signature="8046:8089" ph="SELECT * FRO... ASSUMPTIONS" />
+            <marker date="1483482910160" expanded="true" signature="8490:8550" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="8949:8991" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="9456:9514" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="9561:9619" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="9666:9717" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="9764:9821" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="10187:10316" ph="UPDATE USER_... " />
+            <marker date="1483482910160" expanded="true" signature="10410:10447" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="10583:10626" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="10797:10873" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1442,38 +1442,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/databaseManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        <state relative-caret-position="544">
+          <caret line="32" column="20" lean-forward="false" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1483482547613" expanded="true" signature="272:320" ph="SELECT ROLES... ROLES" />
-            <marker date="1483482547613" expanded="true" signature="666:685" ph="SELECT * FRO... ROLES" />
-            <marker date="1483482547613" expanded="true" signature="938:974" ph="SELECT story... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="1311:1337" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="1441:1502" ph="SELECT * FRO... STEPS" />
-            <marker date="1483482547613" expanded="true" signature="2001:2057" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="2167:2241" ph="SELECT ROLE_... ROLE_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="2428:2520" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="3050:3099" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="3445:3543" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="4221:4345" ph="INSERT INTO USER_STORIES... " />
-            <marker date="1483482547613" expanded="true" signature="4884:4954" ph="SELECT story... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="5123:5207" ph="INSERT INTO ASSUMPTIONS... " />
-            <marker date="1483482547613" expanded="true" signature="5877:5954" ph="INSERT INTO STEPS... " />
-            <marker date="1483482547613" expanded="true" signature="6275:6335" ph="INSERT INTO ROLE_STORIES... " />
-            <marker date="1483482547613" expanded="true" signature="7296:7340" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="7694:7731" ph="SELECT * FRO... STEPS" />
-            <marker date="1483482547613" expanded="true" signature="7854:7897" ph="SELECT * FRO... ASSUMPTIONS" />
-            <marker date="1483482547613" expanded="true" signature="8298:8358" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="8757:8799" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1483482547613" expanded="true" signature="9264:9322" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="9369:9427" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="9474:9525" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="9572:9629" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="9995:10124" ph="UPDATE USER_... " />
-            <marker date="1483482547613" expanded="true" signature="10218:10255" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="10391:10434" ph="DELETE FROM " />
-            <marker date="1483482547613" expanded="true" signature="10605:10681" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="272:320" ph="SELECT ROLES... ROLES" />
+            <marker date="1483482910160" expanded="true" signature="801:820" ph="SELECT * FRO... ROLES" />
+            <marker date="1483482910160" expanded="true" signature="1130:1166" ph="SELECT story... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="1503:1529" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="1633:1694" ph="SELECT * FRO... STEPS" />
+            <marker date="1483482910160" expanded="true" signature="2193:2249" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="2359:2433" ph="SELECT ROLE_... ROLE_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="2620:2712" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="3242:3291" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="3637:3735" ph="SELECT USER_... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="4413:4537" ph="INSERT INTO USER_STORIES... " />
+            <marker date="1483482910160" expanded="true" signature="5076:5146" ph="SELECT story... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="5315:5399" ph="INSERT INTO ASSUMPTIONS... " />
+            <marker date="1483482910160" expanded="true" signature="6069:6146" ph="INSERT INTO STEPS... " />
+            <marker date="1483482910160" expanded="true" signature="6467:6527" ph="INSERT INTO ROLE_STORIES... " />
+            <marker date="1483482910160" expanded="true" signature="7488:7532" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="7886:7923" ph="SELECT * FRO... STEPS" />
+            <marker date="1483482910160" expanded="true" signature="8046:8089" ph="SELECT * FRO... ASSUMPTIONS" />
+            <marker date="1483482910160" expanded="true" signature="8490:8550" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="8949:8991" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483482910160" expanded="true" signature="9456:9514" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="9561:9619" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="9666:9717" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="9764:9821" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="10187:10316" ph="UPDATE USER_... " />
+            <marker date="1483482910160" expanded="true" signature="10410:10447" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="10583:10626" ph="DELETE FROM " />
+            <marker date="1483482910160" expanded="true" signature="10797:10873" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
