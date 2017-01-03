@@ -1,10 +1,6 @@
 import sqlite3
 import psycopg2
 import os
-import urlparse
-
-urlparse.uses_netloc.append("postgres")
-url = urlparse.urlparse(os.environ["DATABASE_URL"])
 
 
 class DatabaseManager:
@@ -25,14 +21,7 @@ class DatabaseManager:
 
     @staticmethod
     def get_roles():
-        # db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
-        db = psycopg2.connect(
-            database=url.path[1:],
-            user=url.username,
-            password=url.password,
-            host=url.hostname,
-            port=url.port
-        )
+        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
         # db = sqlite3.connect('testDB.db')
         data = db.cursor()
         data.execute('SELECT * FROM ROLES')
