@@ -107,16 +107,17 @@
                         {% endif %}
                     {% endfor %}
                     {% if steps.__len__() < 1 %}
-                        <div class="StepLine">
+                        <div class="StepLine Between DragStepLine" ondragover="allowDrop(event);" ondrop="drop(event);"></div>
+                        <div class="StepLine" id="stepLine1" draggable="true" ondragstart="drag(event);">
                             <div class="Delete" onclick="deleteStep(this);">&#9986;</div>
                             <input class="AddInput Step" name="step" id="step1" autocomplete="off" placeholder="Step">
                         </div>
                     {% endif %}
+                    <div class="StepLine DragStepLine">
+                        <div class="DragToBox" ondragover="allowDrop(event);" ondrop="drop(event);">Drop Here</div>
+                    </div><br /><br />
                 </div>
                 <div class="AddBox DraggingAddBox">
-                    <div class="StepLine DragStepLine">
-                        <div class="AddInput DragToBox" ondragover="allowDrop(event);" ondrop="drop(event);">Drop Here</div>
-                    </div><br /><br />
 {#                    <select class="AddSelect" id="addSelect">#}
 {#                        <option value="Step">Step</option>#}
 {#                        <option value="Note">Note</option>#}

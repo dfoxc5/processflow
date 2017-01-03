@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beeecf5a-7331-4e83-8ebf-38b6afffbdb2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/image_test_2_header.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/image_test_2_search_client_glance.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/image_test_2_search_info.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_search_info_blank.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_search_info_filled.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/test_header.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/test_images_header.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/test_images_search_info.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/test_story_header.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/title_1_header.gif" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testDB.db" afterPath="$PROJECT_DIR$/testDB.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/css/mystyle.css" afterPath="$PROJECT_DIR$/app/static/css/mystyle.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/js/myjava.js" afterPath="$PROJECT_DIR$/app/static/js/myjava.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/addstory.html" afterPath="$PROJECT_DIR$/app/templates/addstory.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databaseManager.py" afterPath="$PROJECT_DIR$/databaseManager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,7 +33,7 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/untitled$untitled.coverage" NAME="untitled Coverage Results" MODIFIED="1481748738484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/untitled$views.coverage" NAME="views Coverage Results" MODIFIED="1481917890154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/untitled$run.coverage" NAME="run Coverage Results" MODIFIED="1483033538212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/untitled$run.coverage" NAME="run Coverage Results" MODIFIED="1483461993063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1481752663806" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -51,20 +70,42 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="postgres@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="postgres@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="DockManager">
-    <window id="1">
+    <window id="2">
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/app/views.py">
+            <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
+              <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4ee21daf-60cf-402c-9613-3c1fe303a364/console.sql">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="459">
-                    <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-                    <folding>
-                      <element signature="e#0#51#0" expanded="true" />
-                    </folding>
+                  <state relative-caret-position="476">
+                    <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="67" selection-end-column="40" />
+                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -76,7 +117,25 @@
     <window id="1">
       <content type="file-editors">
         <state>
-          <leaf>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/app/views.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="17">
+                    <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
             <file leaf-file-name="storywalkthroughbase.html" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/app/templates/storywalkthroughbase.html">
                 <provider selected="true" editor-type-id="text-editor">
@@ -90,8 +149,8 @@
             <file leaf-file-name="addstory.html" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/app/templates/addstory.html">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="595">
-                    <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+                  <state relative-caret-position="432">
+                    <caret line="116" column="36" lean-forward="false" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
                     <folding />
                   </state>
                 </provider>
@@ -102,24 +161,6 @@
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="153">
                     <caret line="9" column="62" lean-forward="false" selection-start-line="9" selection-start-column="62" selection-end-line="9" selection-end-column="62" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
-              <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4ee21daf-60cf-402c-9613-3c1fe303a364/console.sql">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="629">
-                    <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
                     <folding />
                   </state>
                 </provider>
@@ -143,11 +184,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myjava.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="myjava.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/static/js/myjava.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="760" column="28" lean-forward="false" selection-start-line="760" selection-start-column="28" selection-end-line="760" selection-end-column="28" />
+            <state relative-caret-position="482">
+              <caret line="369" column="43" lean-forward="false" selection-start-line="369" selection-start-column="43" selection-end-line="369" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -156,118 +197,58 @@
       <file leaf-file-name="databaseManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/databaseManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+            <state relative-caret-position="561">
+              <caret line="78" column="24" lean-forward="false" selection-start-line="78" selection-start-column="26" selection-end-line="80" selection-end-column="89" />
               <folding>
-                <marker date="1482968509381" expanded="true" signature="246:294" ph="SELECT ROLES... ROLES" />
-                <marker date="1482968509381" expanded="true" signature="246:311" ph="SELECT ROLES... ROLES" />
-                <marker date="1482968509381" expanded="true" signature="536:555" ph="SELECT * FRO... ROLES" />
-                <marker date="1482968509381" expanded="true" signature="748:784" ph="SELECT story... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="1061:1087" ph="SELECT story... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="1191:1226" ph="SELECT * FRO... STEPS" />
-                <marker date="1482968509381" expanded="true" signature="1191:1227" ph="SELECT * FRO... STEPS" />
-                <marker date="1482968509381" expanded="true" signature="1191:1252" ph="SELECT * FRO... STEPS" />
-                <marker date="1482968509381" expanded="true" signature="1691:1747" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="1857:1931" ph="SELECT ROLE_... ROLE_STORY" />
-                <marker date="1482968509381" expanded="true" signature="2118:2161" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="2118:2202" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="2118:2210" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="2734:2774" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="2734:2783" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="2734:2787" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="2734:2796" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="3129:3207" ph="SELECT EPICS... EPICS" />
-                <marker date="1482968509381" expanded="true" signature="3129:3208" ph="SELECT USER_... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="3129:3222" ph="SELECT EPICS... EPICS" />
-                <marker date="1482968509381" expanded="true" signature="3129:3227" ph="SELECT USER_... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="3905:4006" ph="INSERT INTO USER_STORIES... " />
-                <marker date="1482968509381" expanded="true" signature="4541:4594" ph="SELECT story... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="4541:4611" ph="SELECT story... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="4780:4861" ph="INSERT INTO ASSUMPTIONS... " />
-                <marker date="1482968509381" expanded="true" signature="5531:5604" ph="INSERT INTO STEPS... " />
-                <marker date="1482968509381" expanded="true" signature="5925:5983" ph="INSERT INTO ROLE_STORIES... " />
-                <marker date="1482968509381" expanded="true" signature="6824:6867" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="6824:6868" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="7222:7258" ph="SELECT * FRO... STEPS" />
-                <marker date="1482968509381" expanded="true" signature="7222:7259" ph="SELECT * FRO... STEPS" />
-                <marker date="1482968509381" expanded="true" signature="7382:7425" ph="SELECT * FRO... ASSUMPTIONS" />
-                <marker date="1482968509381" expanded="true" signature="7766:7811" ph="SELECT USER_... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="7766:7812" ph="SELECT USER_... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="7766:7826" ph="SELECT * FRO... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="8165:8207" ph="SELECT USER_... USER_STORIES" />
-                <marker date="1482968509381" expanded="true" signature="8612:8653" ph="DELETE FROM " />
-                <marker date="1482968509381" expanded="true" signature="8612:8670" ph="DELETE FROM " />
-                <marker date="1482968509381" expanded="true" signature="8717:8775" ph="DELETE FROM " />
-                <marker date="1482968509381" expanded="true" signature="8822:8873" ph="DELETE FROM " />
-                <marker date="1482968509381" expanded="true" signature="8920:8977" ph="DELETE FROM " />
-                <marker date="1482968509381" expanded="true" signature="9283:9408" ph="UPDATE USER_... " />
-                <marker date="1482968509381" expanded="true" signature="9290:9408" ph="DELETE FROM " />
-                <marker date="1482968509381" expanded="true" signature="9502:9538" ph="DELETE FROM " />
-                <marker date="1482968509381" expanded="true" signature="9674:9716" ph="DELETE FROM " />
-                <marker date="1482968509381" expanded="true" signature="9887:9941" ph="DELETE FROM " />
-                <marker date="1482968509381" expanded="true" signature="9887:9963" ph="DELETE FROM " />
+                <element signature="e#0#14#0" expanded="true" />
+                <marker date="1483143001870" expanded="true" signature="262:310" ph="SELECT ROLES... ROLES" />
+                <marker date="1483143001870" expanded="true" signature="658:677" ph="SELECT * FRO... ROLES" />
+                <marker date="1483143001870" expanded="true" signature="870:906" ph="SELECT story... USER_STORIES" />
+                <marker date="1483143001870" expanded="true" signature="1183:1209" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483143001870" expanded="true" signature="1313:1374" ph="SELECT * FRO... STEPS" />
+                <marker date="1483143001870" expanded="true" signature="1813:1869" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483143001870" expanded="true" signature="1979:2053" ph="SELECT ROLE_... ROLE_STORIES" />
+                <marker date="1483143001870" expanded="true" signature="2240:2332" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483143001870" expanded="true" signature="2862:2911" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483143001870" expanded="true" signature="3257:3355" ph="SELECT USER_... USER_STORIES" />
+                <marker date="1483143001870" expanded="true" signature="4033:4134" ph="INSERT INTO USER_STORIES... " />
+                <marker date="1483143001870" expanded="true" signature="4669:4739" ph="SELECT story... USER_STORIES" />
+                <marker date="1483143001870" expanded="true" signature="4908:4989" ph="INSERT INTO ASSUMPTIONS... " />
+                <marker date="1483143001870" expanded="true" signature="5659:5732" ph="INSERT INTO STEPS... " />
+                <marker date="1483143001870" expanded="true" signature="6053:6111" ph="INSERT INTO ROLE_STORIES... " />
+                <marker date="1483143001870" expanded="true" signature="6952:6996" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483143001870" expanded="true" signature="7350:7387" ph="SELECT * FRO... STEPS" />
+                <marker date="1483143001870" expanded="true" signature="7510:7553" ph="SELECT * FRO... ASSUMPTIONS" />
+                <marker date="1483143001870" expanded="true" signature="7894:7954" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483143001870" expanded="true" signature="8293:8335" ph="SELECT * FRO... USER_STORIES" />
+                <marker date="1483143001870" expanded="true" signature="8740:8798" ph="DELETE FROM " />
+                <marker date="1483143001870" expanded="true" signature="8845:8903" ph="DELETE FROM " />
+                <marker date="1483143001870" expanded="true" signature="8950:9001" ph="DELETE FROM " />
+                <marker date="1483143001870" expanded="true" signature="9048:9105" ph="DELETE FROM " />
+                <marker date="1483143001870" expanded="true" signature="9411:9536" ph="UPDATE USER_... " />
+                <marker date="1483143001870" expanded="true" signature="9630:9666" ph="DELETE FROM " />
+                <marker date="1483143001870" expanded="true" signature="9802:9844" ph="DELETE FROM " />
+                <marker date="1483143001870" expanded="true" signature="10015:10091" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/run.py">
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0cf79a06-cf9f-4ff2-b6eb-bc4528d25776/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/requirements.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="15" lean-forward="true" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="storylistbase.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/storylistbase.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="102" lean-forward="false" selection-start-line="7" selection-start-column="102" selection-end-line="7" selection-end-column="102" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mystyle.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mystyle.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/static/css/mystyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="724" column="18" lean-forward="true" selection-start-line="724" selection-start-column="18" selection-end-line="724" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -286,14 +267,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>split</find>
-      <find>display</find>
-      <find>testDB.db</find>
-      <find>../testDB.db</find>
-      <find>self.role</find>
-      <find>epic</find>
-      <find>load</find>
-      <find>&quot;Epic&quot;</find>
       <find>StoryStory</find>
       <find>homeButton</find>
       <find>LoadE</find>
@@ -316,6 +289,14 @@
       <find>storyList</find>
       <find>/</find>
       <find>if temp</find>
+      <find>delete</find>
+      <find>StepLine</find>
+      <find>drop</find>
+      <find>Drop</find>
+      <find>Betwe</find>
+      <find>#wa</find>
+      <find>Deletor</find>
+      <find>AddBox</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -353,19 +334,20 @@
         <option value="$PROJECT_DIR$/app/templates/rolehome.html" />
         <option value="$PROJECT_DIR$/app/templates/help.html" />
         <option value="$PROJECT_DIR$/app/templates/storylistbase.html" />
-        <option value="$PROJECT_DIR$/app/static/css/mystyle.css" />
         <option value="$PROJECT_DIR$/app/templates/base.html" />
-        <option value="$PROJECT_DIR$/databaseManager.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4ee21daf-60cf-402c-9613-3c1fe303a364/console.sql" />
         <option value="$PROJECT_DIR$/app/templates/storywalkthroughbase.html" />
-        <option value="$PROJECT_DIR$/app/templates/addstory.html" />
-        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
         <option value="$PROJECT_DIR$/procfile" />
         <option value="$PROJECT_DIR$/config.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/0cf79a06-cf9f-4ff2-b6eb-bc4528d25776/console.sql" />
         <option value="$PROJECT_DIR$/run.py" />
+        <option value="$PROJECT_DIR$/databaseManager.py" />
+        <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/static/js/myjava.js" />
+        <option value="$PROJECT_DIR$/app/templates/addstory.html" />
+        <option value="$PROJECT_DIR$/app/static/css/mystyle.css" />
       </list>
     </option>
   </component>
@@ -377,7 +359,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1085" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -396,6 +378,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -422,10 +405,93 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -433,7 +499,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -795,20 +862,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1085" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07986871" sideWeight="0.49791667" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36433262" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30490404" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.50875276" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08017335" sideWeight="0.49791667" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36097562" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30526316" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1761488" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34135666" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -816,6 +882,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -825,19 +892,19 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.50208336" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28884026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19803064" sideWeight="0.49791667" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35995623" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50875276" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08017335" sideWeight="0.49791667" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3651386" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18490154" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30490404" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39824945" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34135666" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -856,12 +923,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/views.py</url>
-          <line>95</line>
+          <line>96</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app/views.py</url>
-          <line>107</line>
+          <line>108</line>
           <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
@@ -877,14 +944,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/templates/rolehome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/addstory.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -905,7 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33983">
           <caret line="1999" column="0" lean-forward="false" selection-start-line="1999" selection-start-column="0" selection-end-line="1999" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -945,53 +1003,35 @@
         <state relative-caret-position="408">
           <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
-            <marker date="1482968509381" expanded="true" signature="246:294" ph="SELECT ROLES... ROLES" />
-            <marker date="1482968509381" expanded="true" signature="246:311" ph="SELECT ROLES... ROLES" />
-            <marker date="1482968509381" expanded="true" signature="536:555" ph="SELECT * FRO... ROLES" />
-            <marker date="1482968509381" expanded="true" signature="748:784" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="1061:1087" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="1191:1226" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="1191:1227" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="1191:1252" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="1691:1747" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="1857:1931" ph="SELECT ROLE_... ROLE_STORY" />
-            <marker date="1482968509381" expanded="true" signature="2118:2161" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2118:2202" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2118:2210" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2774" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2783" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2787" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2796" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="3129:3207" ph="SELECT EPICS... EPICS" />
-            <marker date="1482968509381" expanded="true" signature="3129:3208" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="3129:3222" ph="SELECT EPICS... EPICS" />
-            <marker date="1482968509381" expanded="true" signature="3129:3227" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="3905:4006" ph="INSERT INTO USER_STORIES... " />
-            <marker date="1482968509381" expanded="true" signature="4541:4594" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="4541:4611" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="4780:4861" ph="INSERT INTO ASSUMPTIONS... " />
-            <marker date="1482968509381" expanded="true" signature="5531:5604" ph="INSERT INTO STEPS... " />
-            <marker date="1482968509381" expanded="true" signature="5925:5983" ph="INSERT INTO ROLE_STORIES... " />
-            <marker date="1482968509381" expanded="true" signature="6824:6867" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="6824:6868" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="7222:7258" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="7222:7259" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="7382:7425" ph="SELECT * FRO... ASSUMPTIONS" />
-            <marker date="1482968509381" expanded="true" signature="7766:7811" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="7766:7812" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="7766:7826" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="8165:8207" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="8612:8653" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8612:8670" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8717:8775" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8822:8873" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8920:8977" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9283:9408" ph="UPDATE USER_... " />
-            <marker date="1482968509381" expanded="true" signature="9290:9408" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9502:9538" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9674:9716" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9887:9941" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9887:9963" ph="DELETE FROM " />
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1483143001870" expanded="true" signature="262:310" ph="SELECT ROLES... ROLES" />
+            <marker date="1483143001870" expanded="true" signature="658:677" ph="SELECT * FRO... ROLES" />
+            <marker date="1483143001870" expanded="true" signature="870:906" ph="SELECT story... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="1183:1209" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="1313:1374" ph="SELECT * FRO... STEPS" />
+            <marker date="1483143001870" expanded="true" signature="1813:1869" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="1979:2053" ph="SELECT ROLE_... ROLE_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="2240:2332" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="2862:2911" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="3257:3355" ph="SELECT USER_... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="4033:4134" ph="INSERT INTO USER_STORIES... " />
+            <marker date="1483143001870" expanded="true" signature="4669:4739" ph="SELECT story... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="4908:4989" ph="INSERT INTO ASSUMPTIONS... " />
+            <marker date="1483143001870" expanded="true" signature="5659:5732" ph="INSERT INTO STEPS... " />
+            <marker date="1483143001870" expanded="true" signature="6053:6111" ph="INSERT INTO ROLE_STORIES... " />
+            <marker date="1483143001870" expanded="true" signature="6952:6996" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="7350:7387" ph="SELECT * FRO... STEPS" />
+            <marker date="1483143001870" expanded="true" signature="7510:7553" ph="SELECT * FRO... ASSUMPTIONS" />
+            <marker date="1483143001870" expanded="true" signature="7894:7954" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="8293:8335" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="8740:8798" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="8845:8903" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="8950:9001" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="9048:9105" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="9411:9536" ph="UPDATE USER_... " />
+            <marker date="1483143001870" expanded="true" signature="9630:9666" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="9802:9844" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="10015:10091" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1000,7 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,9 +1047,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="799">
           <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1059,53 +1096,35 @@
         <state relative-caret-position="408">
           <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
           <folding>
-            <marker date="1482968509381" expanded="true" signature="246:294" ph="SELECT ROLES... ROLES" />
-            <marker date="1482968509381" expanded="true" signature="246:311" ph="SELECT ROLES... ROLES" />
-            <marker date="1482968509381" expanded="true" signature="536:555" ph="SELECT * FRO... ROLES" />
-            <marker date="1482968509381" expanded="true" signature="748:784" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="1061:1087" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="1191:1226" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="1191:1227" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="1191:1252" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="1691:1747" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="1857:1931" ph="SELECT ROLE_... ROLE_STORY" />
-            <marker date="1482968509381" expanded="true" signature="2118:2161" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2118:2202" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2118:2210" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2774" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2783" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2787" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2796" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="3129:3207" ph="SELECT EPICS... EPICS" />
-            <marker date="1482968509381" expanded="true" signature="3129:3208" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="3129:3222" ph="SELECT EPICS... EPICS" />
-            <marker date="1482968509381" expanded="true" signature="3129:3227" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="3905:4006" ph="INSERT INTO USER_STORIES... " />
-            <marker date="1482968509381" expanded="true" signature="4541:4594" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="4541:4611" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="4780:4861" ph="INSERT INTO ASSUMPTIONS... " />
-            <marker date="1482968509381" expanded="true" signature="5531:5604" ph="INSERT INTO STEPS... " />
-            <marker date="1482968509381" expanded="true" signature="5925:5983" ph="INSERT INTO ROLE_STORIES... " />
-            <marker date="1482968509381" expanded="true" signature="6824:6867" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="6824:6868" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="7222:7258" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="7222:7259" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="7382:7425" ph="SELECT * FRO... ASSUMPTIONS" />
-            <marker date="1482968509381" expanded="true" signature="7766:7811" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="7766:7812" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="7766:7826" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="8165:8207" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="8612:8653" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8612:8670" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8717:8775" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8822:8873" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8920:8977" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9283:9408" ph="UPDATE USER_... " />
-            <marker date="1482968509381" expanded="true" signature="9290:9408" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9502:9538" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9674:9716" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9887:9941" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9887:9963" ph="DELETE FROM " />
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1483143001870" expanded="true" signature="262:310" ph="SELECT ROLES... ROLES" />
+            <marker date="1483143001870" expanded="true" signature="658:677" ph="SELECT * FRO... ROLES" />
+            <marker date="1483143001870" expanded="true" signature="870:906" ph="SELECT story... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="1183:1209" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="1313:1374" ph="SELECT * FRO... STEPS" />
+            <marker date="1483143001870" expanded="true" signature="1813:1869" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="1979:2053" ph="SELECT ROLE_... ROLE_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="2240:2332" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="2862:2911" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="3257:3355" ph="SELECT USER_... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="4033:4134" ph="INSERT INTO USER_STORIES... " />
+            <marker date="1483143001870" expanded="true" signature="4669:4739" ph="SELECT story... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="4908:4989" ph="INSERT INTO ASSUMPTIONS... " />
+            <marker date="1483143001870" expanded="true" signature="5659:5732" ph="INSERT INTO STEPS... " />
+            <marker date="1483143001870" expanded="true" signature="6053:6111" ph="INSERT INTO ROLE_STORIES... " />
+            <marker date="1483143001870" expanded="true" signature="6952:6996" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="7350:7387" ph="SELECT * FRO... STEPS" />
+            <marker date="1483143001870" expanded="true" signature="7510:7553" ph="SELECT * FRO... ASSUMPTIONS" />
+            <marker date="1483143001870" expanded="true" signature="7894:7954" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="8293:8335" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="8740:8798" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="8845:8903" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="8950:9001" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="9048:9105" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="9411:9536" ph="UPDATE USER_... " />
+            <marker date="1483143001870" expanded="true" signature="9630:9666" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="9802:9844" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="10015:10091" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1114,44 +1133,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="34" lean-forward="true" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/untitled.py" />
     <entry file="dbDummy://dbtable:/442f6531/4ee21daf-60cf-402c-9613-3c1fe303a364/ROLES">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/442f6531/4ee21daf-60cf-402c-9613-3c1fe303a364/ROLE_STORIES">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/442f6531/4ee21daf-60cf-402c-9613-3c1fe303a364/ROLE_STORY">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1175,7 +1193,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="265" column="0" lean-forward="false" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1184,7 +1201,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="52" lean-forward="false" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1192,7 +1208,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
           <caret line="421" column="0" lean-forward="false" selection-start-line="421" selection-start-column="0" selection-end-line="421" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1200,7 +1215,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="680" column="0" lean-forward="false" selection-start-line="680" selection-start-column="0" selection-end-line="680" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1208,7 +1222,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="342" column="0" lean-forward="false" selection-start-line="342" selection-start-column="0" selection-end-line="342" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1216,7 +1229,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="283" column="0" lean-forward="false" selection-start-line="283" selection-start-column="0" selection-end-line="283" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1224,7 +1236,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
           <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1232,7 +1243,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="71" column="92" lean-forward="false" selection-start-line="71" selection-start-column="92" selection-end-line="71" selection-end-column="92" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1265,14 +1275,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/css/mystyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/storywalkthroughbase.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1285,70 +1287,74 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="1624" column="0" lean-forward="false" selection-start-line="1624" selection-start-column="0" selection-end-line="1624" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/databaseManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+        <state relative-caret-position="561">
+          <caret line="78" column="24" lean-forward="false" selection-start-line="78" selection-start-column="26" selection-end-line="80" selection-end-column="89" />
           <folding>
-            <marker date="1482968509381" expanded="true" signature="246:294" ph="SELECT ROLES... ROLES" />
-            <marker date="1482968509381" expanded="true" signature="246:311" ph="SELECT ROLES... ROLES" />
-            <marker date="1482968509381" expanded="true" signature="536:555" ph="SELECT * FRO... ROLES" />
-            <marker date="1482968509381" expanded="true" signature="748:784" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="1061:1087" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="1191:1226" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="1191:1227" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="1191:1252" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="1691:1747" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="1857:1931" ph="SELECT ROLE_... ROLE_STORY" />
-            <marker date="1482968509381" expanded="true" signature="2118:2161" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2118:2202" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2118:2210" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2774" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2783" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2787" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="2734:2796" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="3129:3207" ph="SELECT EPICS... EPICS" />
-            <marker date="1482968509381" expanded="true" signature="3129:3208" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="3129:3222" ph="SELECT EPICS... EPICS" />
-            <marker date="1482968509381" expanded="true" signature="3129:3227" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="3905:4006" ph="INSERT INTO USER_STORIES... " />
-            <marker date="1482968509381" expanded="true" signature="4541:4594" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="4541:4611" ph="SELECT story... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="4780:4861" ph="INSERT INTO ASSUMPTIONS... " />
-            <marker date="1482968509381" expanded="true" signature="5531:5604" ph="INSERT INTO STEPS... " />
-            <marker date="1482968509381" expanded="true" signature="5925:5983" ph="INSERT INTO ROLE_STORIES... " />
-            <marker date="1482968509381" expanded="true" signature="6824:6867" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="6824:6868" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="7222:7258" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="7222:7259" ph="SELECT * FRO... STEPS" />
-            <marker date="1482968509381" expanded="true" signature="7382:7425" ph="SELECT * FRO... ASSUMPTIONS" />
-            <marker date="1482968509381" expanded="true" signature="7766:7811" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="7766:7812" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="7766:7826" ph="SELECT * FRO... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="8165:8207" ph="SELECT USER_... USER_STORIES" />
-            <marker date="1482968509381" expanded="true" signature="8612:8653" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8612:8670" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8717:8775" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8822:8873" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="8920:8977" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9283:9408" ph="UPDATE USER_... " />
-            <marker date="1482968509381" expanded="true" signature="9290:9408" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9502:9538" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9674:9716" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9887:9941" ph="DELETE FROM " />
-            <marker date="1482968509381" expanded="true" signature="9887:9963" ph="DELETE FROM " />
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1483143001870" expanded="true" signature="262:310" ph="SELECT ROLES... ROLES" />
+            <marker date="1483143001870" expanded="true" signature="658:677" ph="SELECT * FRO... ROLES" />
+            <marker date="1483143001870" expanded="true" signature="870:906" ph="SELECT story... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="1183:1209" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="1313:1374" ph="SELECT * FRO... STEPS" />
+            <marker date="1483143001870" expanded="true" signature="1813:1869" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="1979:2053" ph="SELECT ROLE_... ROLE_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="2240:2332" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="2862:2911" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="3257:3355" ph="SELECT USER_... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="4033:4134" ph="INSERT INTO USER_STORIES... " />
+            <marker date="1483143001870" expanded="true" signature="4669:4739" ph="SELECT story... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="4908:4989" ph="INSERT INTO ASSUMPTIONS... " />
+            <marker date="1483143001870" expanded="true" signature="5659:5732" ph="INSERT INTO STEPS... " />
+            <marker date="1483143001870" expanded="true" signature="6053:6111" ph="INSERT INTO ROLE_STORIES... " />
+            <marker date="1483143001870" expanded="true" signature="6952:6996" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="7350:7387" ph="SELECT * FRO... STEPS" />
+            <marker date="1483143001870" expanded="true" signature="7510:7553" ph="SELECT * FRO... ASSUMPTIONS" />
+            <marker date="1483143001870" expanded="true" signature="7894:7954" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="8293:8335" ph="SELECT * FRO... USER_STORIES" />
+            <marker date="1483143001870" expanded="true" signature="8740:8798" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="8845:8903" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="8950:9001" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="9048:9105" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="9411:9536" ph="UPDATE USER_... " />
+            <marker date="1483143001870" expanded="true" signature="9630:9666" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="9802:9844" ph="DELETE FROM " />
+            <marker date="1483143001870" expanded="true" signature="10015:10091" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/addstory.html">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4ee21daf-60cf-402c-9613-3c1fe303a364/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
+        <state relative-caret-position="476">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="67" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="11" lean-forward="false" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1361,22 +1367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4ee21daf-60cf-402c-9613-3c1fe303a364/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="55" column="20" lean-forward="false" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="18" lean-forward="false" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1385,38 +1375,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="29" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="15" lean-forward="true" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="48" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0cf79a06-cf9f-4ff2-b6eb-bc4528d25776/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="24" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/static/js/myjava.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="760" column="28" lean-forward="false" selection-start-line="760" selection-start-column="28" selection-end-line="760" selection-end-column="28" />
+        <state relative-caret-position="482">
+          <caret line="369" column="43" lean-forward="false" selection-start-line="369" selection-start-column="43" selection-end-line="369" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/addstory.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="116" column="36" lean-forward="false" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/css/mystyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="724" column="18" lean-forward="true" selection-start-line="724" selection-start-column="18" selection-end-line="724" selection-end-column="18" />
           <folding />
         </state>
       </provider>

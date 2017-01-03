@@ -1,4 +1,5 @@
 import sqlite3
+import psycopg2
 
 
 class DatabaseManager:
@@ -19,6 +20,7 @@ class DatabaseManager:
 
     @staticmethod
     def get_roles():
+        # db = psycopg2.connect("host='127.0.0.1' dbname='postgres' user='postgres' password='password'")
         db = sqlite3.connect('testDB.db')
         data = db.cursor()
         data.execute('SELECT * FROM ROLES')
@@ -74,9 +76,9 @@ class DatabaseManager:
                     if temp:
                         for element in temp:
                             story.append(element)
-                        if 'user' in story[2]:
-                            role_name = self.get_role_name(data)
-                            story[2] = str(story[2]).replace("user", role_name).lower()
+                        # if 'user' in story[2]:
+                        #     role_name = self.get_role_name(data)
+                        #     story[2] = str(story[2]).replace("user", role_name).lower()
                         story_list.append(story)
         else:
             mysql = "SELECT * FROM USER_STORIES WHERE containing_epic=" + str(epic)

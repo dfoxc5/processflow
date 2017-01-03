@@ -1,4 +1,5 @@
 from os.path import join, dirname, realpath, isfile
+import docx
 from werkzeug.utils import secure_filename
 from flask import render_template, redirect, request, url_for, flash
 from app import app
