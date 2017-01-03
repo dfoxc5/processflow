@@ -1,10 +1,10 @@
 import sqlite3
 import psycopg2
 import os
-from urllib import parse
+import urllib
 
-parse.uses_netloc.append("postgres")
-url = parse.parse(os.environ["DATABASE_URL"])
+urllib.parse.uses_netloc.append("postgres")
+url = urllib.parse.parse(os.environ["DATABASE_URL"])
 
 
 class DatabaseManager:
