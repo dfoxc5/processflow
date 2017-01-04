@@ -1,4 +1,5 @@
 import sqlite3
+import sqlalchemy
 import psycopg2
 from app import models, db_create, db
 
@@ -27,25 +28,23 @@ class DatabaseManager:
 
     @staticmethod
     def get_all_stories():
-        temp = models.Stories.query.filter()
+        temp = models.Stories.query.all()
         stories = []
         for story in temp:
-            stories.append(story[0])
+            stories.append(story.story_title)
         return stories
 
     @staticmethod
     def get_all_epics():
-        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
-        data = db.cursor()
-        data.execute('SELECT * FROM USER_STORIES')
-        temp = data.fetchall()
+        temp = models.Stories.query.all()
         epics = []
-        for story_id in temp:
-            mysql = "SELECT * FROM STEPS WHERE story_id='" + str(story_id[0]) + "'"
-            data.execute(mysql)
-            check = data.fetchone()
-            if check is None:
-                epics.append(story_id[1])
+        for story in temp:
+            story_id = story.id
+            # mysql = "SELECT * FROM STEPS WHERE story_id='" + str(story_id[0]) + "'"
+            # data.execute(mysql)
+            steps = models.Steps.query.filter(models.Steps.story_id == story_id).count()
+            if steps == 0:
+                epics.append(story.story_title)
         return epics
 
     def get_stories(self, epic):
@@ -54,7 +53,8 @@ class DatabaseManager:
             role = self.role
             if role is not 0:
                 if role == '4':
-                    temp = models.Stories.query.filter(models.Stories.containing_epic == 0).all()
+                    temp = models.Stories.query.filter(models.Stories.containing_epic == None)
+                    temp.all()
                     stories = []
                     for story in temp:
                         stories.append([story.id, story.story_title, story.description, story.containing_epic])
@@ -84,25 +84,26 @@ class DatabaseManager:
         return story_list
 
     @staticmethod
-    def get_epic(epic_title, data):
+    def get_epic(epic_title):
         epic_title = str(epic_title)
-        my_sql = "SELECT USER_STORIES.story_id FROM USER_STORIES WHERE USER_STORIES.story_title='" + epic_title + "'"
-        data.execute(my_sql)
-        epic_id = str(data.fetchone())
-        if epic_id != 'None':
-            return epic_id[1]
+        # my_sql = "SELECT USER_STORIES.story_id FROM USER_STORIES WHERE USER_STORIES.story_title='" + epic_title + "'"
+        # data.execute(my_sql)
+        # epic_id = str(data.fetchone())
+        epic_id = models.Stories.query.filter(models.Stories.story_title == epic_title).first()
+        if epic_id:
+            return epic_id.id
         else:
             return 0
 
     @staticmethod
-    def create_user_story(name, description, workflow, epic_title, data):
+    def create_user_story(name, description, workflow, epic_title):
         name = str(name)
         description = str(description)
-        if epic_title == 0:
+        if epic_title == 0 or epic_title is None:
             epic_title = None
         else:
             epic_title = str(epic_title)
-        if workflow == '':
+        if workflow == '' or workflow is None:
             workflow = None
         else:
             workflow = str(workflow)
@@ -110,28 +111,30 @@ class DatabaseManager:
         if name != '':
             if description != '':
                 try:
-                    data.execute('INSERT INTO USER_STORIES (story_title, description, containing_epic, workflow_id) VALUES (%s, %s, %s, %s) RETURNING story_id', (name, description, epic_title, workflow))
-                    userstory_id = data.fetchone()[0]
-                except sqlite3.IntegrityError:
+                    new_story = models.Stories(story_title=name, description=description, containing_epic=epic_title, workflow_id=workflow)
+                    db.session.add(new_story)
+                    db.session.commit()
+                    userstory_id = models.Stories.query.filter(models.Stories.story_title == name).first()
+                    userstory_id = userstory_id.id
+                except SystemError:
                     return "This story already exists"
         return userstory_id
 
     @staticmethod
-    def create_assumptions(story_id, assumptions, links, data):
-        story_id = str(story_id)
+    def create_assumptions(story_id, assumptions, links):
         if assumptions:
             for i, assumption in enumerate(assumptions):
                 assumption = str(assumption)
                 if len(links[i]) > 1:
-                    mysql = "SELECT story_id FROM USER_STORIES WHERE story_title='" + links[i] + "'"
-                    data.execute(mysql)
-                    link = data.fetchone()[0]
+                    temp = models.Stories.query.filter(models.Stories.story_title == str(links[i])).first()
+                    link = temp.id
                 else:
-                    link = 0
-                data.execute("INSERT INTO ASSUMPTIONS (story_id, assumption, containing_story) VALUES (%s, %s, %s)", (story_id, assumption, link))
+                    link = None
+                new_assumption = models.Assumptions(story_id=story_id, assumption=assumption, containing_story=link)
+                db.session.add(new_assumption)
+            db.session.commit()
 
-    def create_steps(self, story_id, story_title, steps, data):
-        story_id = str(story_id)
+    def create_steps(self, story_id, story_title, steps):
         step_num = 1
         if steps:
             for step in steps:
@@ -144,31 +147,33 @@ class DatabaseManager:
                     step_type = 2
                 else:
                     step_type = 1
-                data.execute('INSERT INTO STEPS (story_id, type, content, step_num) VALUES (%s, %s, %s, %s)', (story_id, step_type, step, step_num))
+                new_step = models.Steps(story_id=story_id, type=step_type, content=step, step_num=step_num)
+                db.session.add(new_step)
                 step_num += 1
+            db.session.commit()
 
     @staticmethod
-    def create_role_story(roles, story_id, data):
+    def create_role_story(roles, story_id):
         story_id = str(story_id)
         role_num = 1
         for role in roles:
             if role == 'checked':
                 role_id = role_num
-                data.execute("INSERT INTO ROLE_STORIES (role_id, story_id) VALUES (%s, %s)", (role_id, story_id))
+                new_role = models.RoleStories(role_id=role_id, story_id=story_id)
+                db.session.add(new_role)
             role_num += 1
+        db.session.commit()
 
     def save_story(self, roles, epic_title, title, description, assumptions, linked_stories, workflow, steps):
-        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
-        data = db.cursor()
-        epic_title = self.get_epic(epic_title, data)
-        story_id = self.create_user_story(title, description, workflow, epic_title, data)
+        epic_title = self.get_epic(epic_title)
+        story_id = self.create_user_story(title, description, workflow, epic_title)
         if story_id != 0:
-            self.create_role_story(roles, story_id, data)
+            self.create_role_story(roles, story_id)
             if assumptions:
-                self.create_assumptions(story_id, assumptions, linked_stories, data)
+                self.create_assumptions(story_id, assumptions, linked_stories)
             if len(steps) > 1:
-                self.create_steps(story_id, title, steps, data)
-        db.commit()
+                self.create_steps(story_id, title, steps)
+        db.session.commit()
 
     def get_story(self, story_id):
         story_list = []
@@ -193,12 +198,7 @@ class DatabaseManager:
 
     @staticmethod
     def check_story(title):
-        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
-        data = db.cursor()
-        title = str(title)
-        mysql = "SELECT * FROM USER_STORIES WHERE story_title='" + title + "'"
-        data.execute(mysql)
-        saved = data.fetchone()
+        saved = models.Stories.query.filter(models.Stories.story_title == title).first()
         if saved:
             return True
         else:
@@ -232,8 +232,6 @@ class DatabaseManager:
         data.execute(mysql)
 
     def update_story(self, story):
-        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
-        data = db.cursor()
         if story[3] == 'None' or story[3] == '':
             story[3] = None
         if story[4] == 'None' or story[4] == '':

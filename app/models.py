@@ -10,13 +10,13 @@ class Stories(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     story_title = db.Column(db.String)
     description = db.Column(db.String)
-    containing_epic = db.Column(db.Integer, db.ForeignKey('epics.id'))
+    containing_epic = db.Column(db.Integer, db.ForeignKey('stories.id'))
     workflow_id = db.Column(db.Integer, db.ForeignKey('workflows.id'))
 
 
-class Epics(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    story_id = db.Column(db.Integer, db.ForeignKey('stories.id'))
+# class Epics(db.Model):
+#     id = db.Column(db.Integer, primary_key=True)
+#     story_id = db.Column(db.Integer, db.ForeignKey('stories.id'))
 
 
 class RoleStories(db.Model):

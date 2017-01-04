@@ -27,4 +27,6 @@ def create_roles():
 def create_test_stories():
     new_story = models.Stories(story_title="Test 1", description="Test", containing_epic=None, workflow_id=None)
     db.session.add(new_story)
+    new_story = models.Stories(story_title="Test 2", description="Test", containing_epic=None, workflow_id=None)
+    db.session.add(new_story)
     db.session.commit()
