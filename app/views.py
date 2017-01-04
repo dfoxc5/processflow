@@ -131,7 +131,7 @@ def get_story():
         epic = True
         # current_stories = db.get_stories(story_list[0])
         current_stories = []
-    if story_list[3] is not None and story_list[3] != 0:
+    if story_list[3] is not None:
         containing_epics = db.get_containing_epics(story_list[3])
     return render_template('storywalkthroughbase.html', story_list=story_list, epic=epic,
                            stories=current_stories, containing_epics=containing_epics)

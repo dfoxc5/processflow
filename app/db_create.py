@@ -2,7 +2,7 @@ from app import db, models
 
 
 def init_database():
-    # db.drop_all()
+    db.drop_all()
     db.create_all()
     roles = models.Roles.query.all()
     if len(roles) is 0:
@@ -25,6 +25,6 @@ def create_roles():
 
 
 def create_test_stories():
-    new_story = models.Stories(story_title="Test 1", description="Test", containing_epic=0, workflow_id=1)
+    new_story = models.Stories(story_title="Test 1", description="Test", containing_epic=None, workflow_id=1)
     db.session.add(new_story)
     db.session.commit()
