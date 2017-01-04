@@ -123,19 +123,18 @@ def get_story():
             except TypeError:
                 links.append("")
         return render_template('addstory.html', role=story_list[-1], epic_title=story_list[3], title=story_list[1],
-                               description=story_list[2], assumption_list=zip(assumptions, links), steps=story_list[5],
-                               stories=stories)
+                               description=story_list[2], assumption_list=zip(assumptions, links), steps=story_list[5])
     epic = False
     current_stories = []
     containing_epics = []
     if story_list[5].__len__() == 0:
         epic = True
-        current_stories = db.get_stories(story_list[0])
-    if story_list[3] is not None and story_list[3] != 'None':
+        # current_stories = db.get_stories(story_list[0])
+        current_stories = []
+    if story_list[3] is not None and story_list[3] != 0:
         containing_epics = db.get_containing_epics(story_list[3])
     return render_template('storywalkthroughbase.html', story_list=story_list, epic=epic,
-                           stories=current_stories, containing_epics=containing_epics,
-                           epic_list=epics)
+                           stories=current_stories, containing_epics=containing_epics)
 
 
 @app.route('/help')

@@ -4,7 +4,7 @@ from app import models, db_create, db
 
 
 class DatabaseManager:
-    role = 0
+    role = ''
     approved_files = ['.gif', '.GIF']
 
     def __init__(self):
@@ -14,35 +14,20 @@ class DatabaseManager:
     def set_role(self, role_num):
         self.role = role_num
 
-    def get_role_name(self, data):
-        mysql = "SELECT ROLES.role_name FROM ROLES WHERE role_id=" + str(self.role)
-        data.execute(mysql)
-        role_name = data.fetchone()[0]
-        return role_name
-
     @staticmethod
     def get_roles():
-        # db = psycopg2.connect("host='ec2-54-235-240-92.compute-1.amazonaws.com' dbname='ddngvqc9ukuv3r' "
-        #                       "user='ropaaaswqzbtxr' password='908bf747bb815f15bd1f79e9cdc435bd2e96b50c54ff59798e603eecb0c1ddea'")
-        # # db = sqlite3.connect('testDB.db')
-        # data = db.cursor()
-        # data.execute('SELECT * FROM ROLES')
-        # roles = data.fetchall()
         roles = models.Roles.query.all()
         role_list = []
         if roles:
             for role in roles:
-                role_list.append(role.role_name)
+                role_list.append([role.role_name, role.id])
             return role_list
         else:
             return 0
 
     @staticmethod
     def get_all_stories():
-        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
-        data = db.cursor()
-        data.execute('SELECT story_title FROM USER_STORIES')
-        temp = data.fetchall()
+        temp = models.Stories.query.filter()
         stories = []
         for story in temp:
             stories.append(story[0])
@@ -64,19 +49,17 @@ class DatabaseManager:
         return epics
 
     def get_stories(self, epic):
-        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
-        data = db.cursor()
         story_list = []
         if epic == '0':
             role = self.role
             if role is not 0:
                 if role == '4':
-                    data.execute("SELECT * FROM USER_STORIES WHERE containing_epic IS NULL")
-                    stories = data.fetchall()
+                    temp = models.Stories.query.filter(models.Stories.containing_epic == 0).all()
+                    stories = []
+                    for story in temp:
+                        stories.append([story.id, story.story_title, story.description, story.containing_epic])
                     return stories
-                my_sql = "SELECT ROLE_STORIES.story_id FROM ROLE_STORIES WHERE ROLE_STORIES.role_id=" + role
-                data.execute(my_sql)
-                stories = data.fetchall()
+                stories = models.RoleStories.query.filter(models.RoleStories.role_id == role).first()
                 story_list = []
                 for story in stories:
                     mysql = "SELECT * FROM USER_STORIES WHERE story_id =" + str(story[0]) + " AND containing_epic IS NULL"
@@ -188,26 +171,23 @@ class DatabaseManager:
         db.commit()
 
     def get_story(self, story_id):
-        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
-        data = db.cursor()
-        story_id = str(story_id)
-        mysql = "SELECT * FROM USER_STORIES WHERE story_id = " + story_id
-        data.execute(mysql)
         story_list = []
-        temp = data.fetchone()
-        for element in temp:
-            story_list.append(element)
-        # if 'user' in story_list[2]:
-        #     role_name = self.get_role_name(data)
-        #     story_list[2] = str(story_list[2]).replace("user", role_name).lower()
-        mysql = "SELECT * FROM STEPS WHERE story_id = " + story_id
-        data.execute(mysql)
-        steps = data.fetchall()
-        story_list.append(steps)
-        mysql = "SELECT * FROM ASSUMPTIONS WHERE story_id = " + story_id
-        data.execute(mysql)
-        assumptions = data.fetchall()
-        story_list.append(assumptions)
+        temp = models.Stories.query.filter(models.Stories.id == story_id).first()
+        story_list.append(temp.id)
+        story_list.append(temp.story_title)
+        story_list.append(temp.description)
+        story_list.append(temp.containing_epic)
+        story_list.append(temp.workflow_id)
+        steps = models.Steps.query.filter(models.Steps.story_id == story_id).all()
+        temp = []
+        for step in steps:
+            temp.append([step.id, step.story_id, step.type, step.content, step.step_num])
+        story_list.append(temp)
+        assumptions = models.Assumptions.query.filter(models.Assumptions.story_id == story_id).all()
+        temp = []
+        for assumption in assumptions:
+            temp.append([assumption.id, assumption.story_id, assumption.assumption, assumption.containing_story])
+        story_list.append(temp)
         story_list.append(self.role)
         return story_list
 

@@ -1,4 +1,4 @@
-from app import db, app
+from app import db
 
 
 class Roles(db.Model):
@@ -11,6 +11,7 @@ class Stories(db.Model):
     story_title = db.Column(db.String)
     description = db.Column(db.String)
     containing_epic = db.Column(db.Integer, db.ForeignKey('epics.id'))
+    workflow_id = db.Column(db.Integer, db.ForeignKey('workflows.id'))
 
 
 class Epics(db.Model):
@@ -38,4 +39,8 @@ class Assumptions(db.Model):
     assumption = db.Column(db.String)
     containing_id = db.Column(db.Integer, db.ForeignKey('stories.id'))
 
+
+class Workflows(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    location = db.Column(db.String)
 
