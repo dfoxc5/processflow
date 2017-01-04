@@ -7,8 +7,8 @@ from databaseManager import DatabaseManager
 db = DatabaseManager()
 UPLOAD_FOLDER = join(dirname(realpath(__file__)), 'static/images/uploads/')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-epics = db.get_all_epics()
-stories = db.get_all_stories()
+# epics = db.get_all_epics()
+# stories = db.get_all_stories()
 
 
 @app.route('/')
