@@ -6,7 +6,7 @@ class Roles(db.Model):
     role_name = db.Column(db.String)
 
 
-class Stories(db.model):
+class Stories(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     story_title = db.Column(db.String)
     description = db.Column(db.String)
