@@ -250,8 +250,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -290,7 +290,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>bind</find>
       <find>addEv</find>
       <find>addEvent</find>
       <find>children</find>
@@ -320,6 +319,7 @@
       <find>127.0.0.1</find>
       <find>DeleteStep</find>
       <find>0.0.0.0</find>
+      <find>column</find>
     </findStrings>
     <replaceStrings>
       <replace>/</replace>
@@ -330,6 +330,7 @@
       <replace>db = psycopg2.connect(&quot;host='127.0.0.1' dbname='postgres' user='postgres' password='password'&quot;)</replace>
       <replace>%s</replace>
       <replace>0.0.0.0:5432</replace>
+      <replace>Column</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -1444,8 +1445,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
