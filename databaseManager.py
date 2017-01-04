@@ -29,8 +29,11 @@ class DatabaseManager:
         # data.execute('SELECT * FROM ROLES')
         # roles = data.fetchall()
         roles = models.Roles.query.all()
+        role_list = []
         if roles:
-            return roles
+            for role in roles:
+                role_list.append(role.role_name)
+            return role_list
         else:
             return 0
 
