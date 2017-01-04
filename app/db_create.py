@@ -2,6 +2,7 @@ from app import db, models
 
 
 def init_database():
+    db.create_all()
     roles = models.Roles.query.all()
     if len(roles) is 0:
         create_roles()
