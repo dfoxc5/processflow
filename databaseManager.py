@@ -127,7 +127,7 @@ class DatabaseManager:
                 step = str(step)
                 if any(x in step for x in self.approved_files):
                     if "static%2Fimages%2Fuploads%2F" not in step:
-                        step = "static/images/uploads/" + str(story_title).replace(" ", "_").lower() + "_" + step
+                        step = "static/images/uploads_full/" + str(story_title).replace(" ", "_").lower() + "_" + step
                     step_type = 3
                 elif step[0] == "(":
                     step_type = 2
