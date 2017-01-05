@@ -1,6 +1,3 @@
-import sqlite3
-import sqlalchemy
-import psycopg2
 from app import models, db_create, db
 
 
@@ -40,8 +37,6 @@ class DatabaseManager:
         epics = []
         for story in temp:
             story_id = story.id
-            # mysql = "SELECT * FROM STEPS WHERE story_id='" + str(story_id[0]) + "'"
-            # data.execute(mysql)
             steps = models.Steps.query.filter(models.Steps.story_id == story_id).count()
             if steps == 0:
                 epics.append(story.story_title)
@@ -69,13 +64,12 @@ class DatabaseManager:
                     for story in temp:
                         story_list.append([story.id, story.story_title, story.description, story.containing_epic, story.workflow_id])
         else:
-            mysql = "SELECT * FROM USER_STORIES WHERE containing_epic=" + str(epic)
-            data.execute(mysql)
-            temp = data.fetchall()
+            temp = models.Stories.query.filter(models.Stories.containing_epic == epic)
+            temp.all()
             story_list = []
             if temp:
                 for story in temp:
-                    story_list.append(story)
+                    story_list.append([story.id, story.story_title, story.description, story.containing_epic, story.workflow_id])
         return story_list
 
     @staticmethod
@@ -206,17 +200,21 @@ class DatabaseManager:
 
     @staticmethod
     def delete_story(story_id):
-        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
-        data = db.cursor()
-        story_id = str(story_id)
-        mysql = "DELETE FROM USER_STORIES WHERE story_id='" + story_id + "'"
-        data.execute(mysql)
-        mysql = "DELETE FROM ROLE_STORIES WHERE story_id='" + story_id + "'"
-        data.execute(mysql)
-        mysql = "DELETE FROM STEPS WHERE story_id='" + story_id + "'"
-        data.execute(mysql)
-        mysql = "DELETE FROM ASSUMPTIONS WHERE story_id='" + story_id + "'"
-        data.execute(mysql)
+        old_role_stories = models.RoleStories.query.filter(models.RoleStories.story_id == story_id)
+        old_role_stories.all()
+        for old_role_story in old_role_stories:
+            db.session.delete(old_role_story)
+        old_story = models.Stories.query.filter(models.Stories.id == story_id)
+        db.session.delete(old_story)
+        old_steps = models.Steps.query.filter(models.Steps.story_id == story_id)
+        old_steps.all()
+        for old_step in old_steps:
+            db.session.delete(old_step)
+        old_assumptions = models.Assumptions.query.filter(models.Assumptions.story_id == story_id)
+        old_assumptions.all()
+        for old_assumption in old_assumptions:
+            db.session.delete(old_assumption)
+        db.session.commit()
 
     def update_story(self, story):
         if story[3] == 'None' or story[3] == '':
