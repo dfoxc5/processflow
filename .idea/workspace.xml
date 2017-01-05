@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beeecf5a-7331-4e83-8ebf-38b6afffbdb2" name="Default" comment="Requirements file">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_arrest_charge_fill.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_arrest_charge_select.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_arrest_charge.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_arrest_charge_fill.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_arrest_info.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_arrest_info_complete.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_arrest_info_fill.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_arrest_search.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_assign_info.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_assign_info_fill.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_client_address.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_client_address_fill.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_client_profile.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_client_profile_fill.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_confirm.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_finished.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_intake_info_save.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_no_client_search.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_search_info.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/new_juvenile_intake_search_info_filled.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/images/uploads/selecting_a_client_search_result.gif" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/testDB.db" afterPath="$PROJECT_DIR$/app/testDB.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="$PROJECT_DIR$/app/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
     </list>
@@ -202,17 +179,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
+            <state relative-caret-position="395">
+              <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="run.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -422,6 +399,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="untitled" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploads" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1222,6 +1225,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/images/uploads/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1232,26 +1251,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/images/uploads/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="1" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/run.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="5" column="34" lean-forward="false" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="45" column="15" lean-forward="true" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
           <folding />
         </state>
       </provider>
