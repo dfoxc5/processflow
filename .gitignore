@@ -46,5 +46,5 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-app/static/testDB.db
-app/static/images/
+app/testDB.db
+app/static/images/uploads/**/
