@@ -205,16 +205,11 @@ class DatabaseManager:
             return False
 
     def get_containing_epics(self, story_id):
-        db = psycopg2.connect("host='0.0.0.0' dbname='postgres' user='postgres' password='password'")
-        data = db.cursor()
-        story_id = str(story_id)
         containing_epics = []
-        mysql = "SELECT * FROM USER_STORIES WHERE story_id=" + story_id
-        data.execute(mysql)
-        temp = data.fetchone()
-        containing_epics.append(temp)
-        if self.get_epic(temp[3], data) != 0:
-            self.get_containing_epics(temp[0])
+        temp = models.Stories.query.filter(models.Stories.id == story_id).first()
+        containing_epics.append([temp.id, temp.story_title, temp.description, temp.containing_epic])
+        if self.get_epic(temp.containing_epic) != 0:
+            self.get_containing_epics(temp.id)
         return containing_epics
 
     @staticmethod
@@ -236,16 +231,27 @@ class DatabaseManager:
             story[3] = None
         if story[4] == 'None' or story[4] == '':
             story[4] = None
-        mysql = "UPDATE USER_STORIES SET story_title=%s, description=%s, containing_epic=%s, workflow_id=%s WHERE story_id='" + str(story[0]) + "'"
-        data.execute(mysql, (story[1], story[2], story[3], story[4]))
-        data.execute("DELETE FROM STEPS WHERE story_id = %s", str(story[0]))
+        old_story = models.Stories.query.filter(models.Stories.id == story[0]).first()
+        old_story.story_title = story[1]
+        old_story.description = story[2]
+        old_story.containing_epic = story[3]
+        old_story.workflow_id = story[4]
+        old_steps = models.Steps.query.filter(models.Steps.story_id == story[0])
+        old_steps.all()
+        for old_step in old_steps:
+            db.session.delete(old_step)
         if len(story[5]) > 0:
-            self.create_steps(story[0], story[1], story[5], data)
-        data.execute("DELETE FROM ASSUMPTIONS WHERE story_id = %s", str(story[0]))
+            self.create_steps(story[0], story[1], story[5])
+        old_assumptions = models.Assumptions.query.filter(models.Assumptions.story_id == story[0])
+        old_assumptions.all()
+        for old_assumption in old_assumptions:
+            db.session.delete(old_assumption)
         if len(story[6]) > 0:
-            self.create_assumptions(story[0], story[6], story[7], data)
+            self.create_assumptions(story[0], story[6], story[7])
         if len(story[8]) > 0:
-            mysql = "DELETE FROM ROLE_STORIES WHERE ROLE_STORIES.story_id='" + str(story[0]) + "'"
-            data.execute(mysql)
-            self.create_role_story(story[8], story[0], data)
-        db.commit()
+            old_roles = models.RoleStories.query.filter(models.RoleStories.story_id == story[0])
+            old_roles.all()
+            for old_role in old_roles:
+                db.session.delete(old_role)
+            self.create_role_story(story[8], story[0])
+        db.session.commit()
