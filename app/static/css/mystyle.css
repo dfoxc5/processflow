@@ -829,7 +829,8 @@ a:hover {
 }
 
 .DeleteAssumption {
-	top: 22px;
+	top: 8px;
+	left: -10px;
 }
 
 .Delete:hover {

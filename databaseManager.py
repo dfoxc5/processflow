@@ -116,7 +116,7 @@ class DatabaseManager:
                     link = temp.id
                 else:
                     link = None
-                new_assumption = models.Assumptions(story_id=story_id, assumption=assumption, containing_story=link)
+                new_assumption = models.Assumptions(story_id=story_id, assumption=assumption, containing_id=link)
                 db.session.add(new_assumption)
             db.session.commit()
 
@@ -163,6 +163,7 @@ class DatabaseManager:
 
     def get_story(self, story_id):
         story_list = []
+        story_id = int(story_id)
         temp = models.Stories.query.filter(models.Stories.id == story_id).first()
         story_list.append(temp.id)
         story_list.append(temp.story_title)
@@ -177,7 +178,7 @@ class DatabaseManager:
         assumptions = models.Assumptions.query.filter(models.Assumptions.story_id == story_id).all()
         temp = []
         for assumption in assumptions:
-            temp.append([assumption.id, assumption.story_id, assumption.assumption, assumption.containing_story])
+            temp.append([assumption.id, assumption.story_id, assumption.assumption, assumption.containing_id])
         story_list.append(temp)
         story_list.append(self.role)
         return story_list
@@ -230,7 +231,7 @@ class DatabaseManager:
         old_steps.all()
         for old_step in old_steps:
             db.session.delete(old_step)
-        if len(story[5]) > 0:
+        if len(story[5][0]) > 0:
             self.create_steps(story[0], story[1], story[5])
         old_assumptions = models.Assumptions.query.filter(models.Assumptions.story_id == story[0])
         old_assumptions.all()
