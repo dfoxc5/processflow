@@ -5,7 +5,7 @@ from flask import render_template, redirect, request, url_for, flash
 from app import app
 from databaseManager import DatabaseManager
 db = DatabaseManager()
-UPLOAD_FOLDER = join(dirname(realpath(__file__)), 'static/images/uploads/')
+UPLOAD_FOLDER = join(dirname(realpath(__file__)), 'static/images/uploads_full/')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 epics = db.get_all_epics()
 stories = db.get_all_stories()
