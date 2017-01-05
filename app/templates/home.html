@@ -2,6 +2,15 @@
 {% block body %}
 	<div class="Whole">
 		<div class="SearchContainer">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="FlashMessages">
+                        {% for message in messages %}
+                            <p>{{ message }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
 			<div class="LabelHolder HomeLabel"><h2>Select Role</h2></div>
 			<div class="HomeButtonHolder">
                 {% for role in roles %}

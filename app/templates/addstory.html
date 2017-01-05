@@ -3,7 +3,8 @@
 	<div class="Whole">
         <div class="SearchContainer">
 			<div class="ButtonHolder">
-                <a href="/" class="SingleButton"><button class="SmallButton">Roles</button></a>
+                <a href="/delete?story={{ id }}" class="DoubleButton" onclick="return CheckDelete();"><button class="SmallButton">Delete</button></a>
+                <a href="/" class="DoubleButton"><button class="SmallButton">Roles</button></a>
 			</div>
             {% with messages = get_flashed_messages() %}
                 {% if messages %}

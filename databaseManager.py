@@ -201,11 +201,12 @@ class DatabaseManager:
 
     @staticmethod
     def delete_story(story_id):
+        story_id = int(story_id)
         old_role_stories = models.RoleStories.query.filter(models.RoleStories.story_id == story_id)
         old_role_stories.all()
         for old_role_story in old_role_stories:
             db.session.delete(old_role_story)
-        old_story = models.Stories.query.filter(models.Stories.id == story_id)
+        old_story = models.Stories.query.filter(models.Stories.id == story_id).first()
         db.session.delete(old_story)
         old_steps = models.Steps.query.filter(models.Steps.story_id == story_id)
         old_steps.all()

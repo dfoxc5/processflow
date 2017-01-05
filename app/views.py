@@ -123,7 +123,7 @@ def get_story():
             except TypeError:
                 links.append("")
         return render_template('addstory.html', role=story_list[-1], epic_title=story_list[3], title=story_list[1],
-                               description=story_list[2], assumption_list=zip(assumptions, links), steps=story_list[5])
+                               description=story_list[2], assumption_list=zip(assumptions, links), steps=story_list[5], id=story_list[0])
     epic = False
     current_stories = []
     containing_epics = []
@@ -135,6 +135,15 @@ def get_story():
         containing_epics = db.get_containing_epics(story_list[3])
     return render_template('storywalkthroughbase.html', story_list=story_list, epic=epic,
                            stories=current_stories, containing_epics=containing_epics)
+
+
+@app.route('/delete')
+def delete_story():
+    args = request.args.to_dict()
+    story = args['story']
+    db.delete_story(story)
+    flash("Story deleted")
+    return redirect(url_for('.start'))
 
 
 @app.route('/help')
