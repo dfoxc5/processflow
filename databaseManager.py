@@ -59,20 +59,15 @@ class DatabaseManager:
                     for story in temp:
                         stories.append([story.id, story.story_title, story.description, story.containing_epic])
                     return stories
-                stories = models.RoleStories.query.filter(models.RoleStories.role_id == role).first()
+                role_stories = models.RoleStories.query.filter(models.RoleStories.role_id == role)
+                role_stories.all()
                 story_list = []
-                for story in stories:
-                    mysql = "SELECT * FROM USER_STORIES WHERE story_id =" + str(story[0]) + " AND containing_epic IS NULL"
-                    data.execute(mysql)
-                    story = []
-                    temp = data.fetchone()
-                    if temp:
-                        for element in temp:
-                            story.append(element)
-                        # if 'user' in story[2]:
-                        #     role_name = self.get_role_name(data)
-                        #     story[2] = str(story[2]).replace("user", role_name).lower()
-                        story_list.append(story)
+                for role_story in role_stories:
+                    temp = models.Stories.query.filter(models.Stories.id == role_story.story_id).filter(models.Stories.containing_epic == None)
+                    temp.all()
+                    story_list = []
+                    for story in temp:
+                        story_list.append([story.id, story.story_title, story.description, story.containing_epic, story.workflow_id])
         else:
             mysql = "SELECT * FROM USER_STORIES WHERE containing_epic=" + str(epic)
             data.execute(mysql)
@@ -86,9 +81,6 @@ class DatabaseManager:
     @staticmethod
     def get_epic(epic_title):
         epic_title = str(epic_title)
-        # my_sql = "SELECT USER_STORIES.story_id FROM USER_STORIES WHERE USER_STORIES.story_title='" + epic_title + "'"
-        # data.execute(my_sql)
-        # epic_id = str(data.fetchone())
         epic_id = models.Stories.query.filter(models.Stories.story_title == epic_title).first()
         if epic_id:
             return epic_id.id
