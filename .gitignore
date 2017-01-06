@@ -47,4 +47,4 @@ Temporary Items
 .apdisk
 
 app/testDB.db
-app/static/images/uploads_full
+#app/static/images/uploads_full
