@@ -23,7 +23,7 @@ class DatabaseManager:
             return "a user"
         role = models.Roles.query.filter(models.Roles.id == role_num).first()
         role_name = role.role_name
-        if role_name == "Other" or "Index":
+        if role_name == "Other" or role_name == "Index":
             role_name = "an Application User"
         else:
             role_name = "a " + role_name
