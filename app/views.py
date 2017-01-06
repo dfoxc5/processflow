@@ -153,7 +153,7 @@ def get_story():
                 try:
                     s3.download_file("processflowc5", image_name, join(dirname(realpath(__file__)), image_name))
                 except:
-                    flash("An image was not found")
+                    flash("Image " + image_name + " was not found")
     return render_template('storywalkthroughbase.html', story_list=story_list, epic=epic,
                            stories=current_stories, containing_epics=containing_epics)
 
