@@ -14,8 +14,8 @@ epics = db.get_all_epics()
 stories = db.get_all_stories()
 s3 = boto3.client(
     's3',
-    aws_access_key_id='AKIAIPGOZIZJFJ4I4RBA',
-    aws_secret_access_key='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',
+    aws_access_key_id=app.config['KEY_ID'],
+    aws_secret_access_key=app.config['KEY_ACCESS'],
 )
 
 
