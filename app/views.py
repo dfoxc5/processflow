@@ -4,11 +4,19 @@ from werkzeug.utils import secure_filename
 from flask import render_template, redirect, request, url_for, flash
 from app import app
 from databaseManager import DatabaseManager
+import boto3
 db = DatabaseManager()
 UPLOAD_FOLDER = join(dirname(realpath(__file__)), 'static/images/uploads_full/')
+DOWNLOAD_FOLDER = join(dirname(realpath(__file__)), 'static/images/downloads/')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['DOWNLOAD_FOLDER'] = DOWNLOAD_FOLDER
 epics = db.get_all_epics()
 stories = db.get_all_stories()
+s3 = boto3.client(
+    's3',
+    aws_access_key_id='AKIAIPGOZIZJFJ4I4RBA',
+    aws_secret_access_key='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',
+)
 
 
 @app.route('/')
@@ -83,6 +91,9 @@ def upload_story():
             saved = isfile(app.config['UPLOAD_FOLDER'] + filename)
             if not saved:
                 file.save(join(app.config['UPLOAD_FOLDER'], filename))
+                file_location = app.config['UPLOAD_FOLDER'] + filename
+                key = 'static/images/downloads/' + filename
+                s3.upload_file(file_location, "processflowc5", key)
         story_saved = db.check_story(title)
         if edit == 'False':
             if story_saved:
@@ -108,6 +119,7 @@ def upload_story():
 def get_story():
     args = request.args.to_dict()
     story = args['story']
+    # s3.download_file("processflowc5", "test", join(dirname(realpath(__file__)), 'static/images/downloads/test.gif'))
     try:
         edit = args['edit']
     except KeyError:
@@ -133,6 +145,14 @@ def get_story():
         current_stories = []
     if story_list[3] is not None:
         containing_epics = db.get_containing_epics(story_list[3])
+    for step in story_list[5]:
+        if step[2] == 3:
+            downloaded = isfile(step[3])
+            if not downloaded:
+                try:
+                    s3.download_file("processflowc5", step[3], join(dirname(realpath(__file__)), step[3]))
+                except:
+                    pass
     return render_template('storywalkthroughbase.html', story_list=story_list, epic=epic,
                            stories=current_stories, containing_epics=containing_epics)
 
