@@ -147,12 +147,13 @@ def get_story():
         containing_epics = db.get_containing_epics(story_list[3])
     for step in story_list[5]:
         if step[2] == 3:
-            downloaded = isfile(step[3])
+            image_name = str(step[3]).replace("%2F", "/")
+            downloaded = isfile(image_name)
             if not downloaded:
                 try:
-                    s3.download_file("processflowc5", step[3], join(dirname(realpath(__file__)), step[3]))
+                    s3.download_file("processflowc5", image_name, join(dirname(realpath(__file__)), image_name))
                 except:
-                    flash("One or more images were not found")
+                    flash("An image was not found")
     return render_template('storywalkthroughbase.html', story_list=story_list, epic=epic,
                            stories=current_stories, containing_epics=containing_epics)
 
