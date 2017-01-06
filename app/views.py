@@ -152,7 +152,7 @@ def get_story():
                 try:
                     s3.download_file("processflowc5", step[3], join(dirname(realpath(__file__)), step[3]))
                 except:
-                    pass
+                    flash("One or more images were not found")
     return render_template('storywalkthroughbase.html', story_list=story_list, epic=epic,
                            stories=current_stories, containing_epics=containing_epics)
 
@@ -162,7 +162,7 @@ def delete_story():
     args = request.args.to_dict()
     story = args['story']
     db.delete_story(story)
-    flash("Story deleted")
+    flash("Story successfully deleted")
     return redirect(url_for('.start'))
 
 
