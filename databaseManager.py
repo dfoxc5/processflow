@@ -1,4 +1,4 @@
-from app import models, db_create, db
+from app import app, models, db_create, db
 
 
 class DatabaseManager:
@@ -9,8 +9,25 @@ class DatabaseManager:
         db_create.init_database()
         pass
 
-    def set_role(self, role_num):
-        self.role = role_num
+    @staticmethod
+    def clear_role():
+        app.config['CURRENT_ROLE'] = 0
+
+    @staticmethod
+    def set_role(role_num):
+        app.config['CURRENT_ROLE'] = role_num
+
+    @staticmethod
+    def get_role_name(role_num):
+        if role_num == 0:
+            return "a user"
+        role = models.Roles.query.filter(models.Roles.id == role_num).first()
+        role_name = role.role_name
+        if role_name == "Other" or "Index":
+            role_name = "an Application User"
+        else:
+            role_name = "a " + role_name
+        return role_name
 
     @staticmethod
     def get_roles():
@@ -42,34 +59,37 @@ class DatabaseManager:
                 epics.append(story.story_title)
         return epics
 
-    def get_stories(self, epic):
+    def get_stories(self, epic, role):
         story_list = []
+        current_role = role
+        current_role_name = self.get_role_name(current_role)
         if epic == '0':
-            role = self.role
-            if role is not 0:
-                if role == '4':
+            if current_role is not 0:
+                if current_role == 4:
                     temp = models.Stories.query.filter(models.Stories.containing_epic == None)
                     temp.all()
                     stories = []
                     for story in temp:
-                        stories.append([story.id, story.story_title, story.description, story.containing_epic])
+                        role_description = str(story.description).replace("a user", current_role_name)
+                        stories.append([story.id, story.story_title, role_description, story.containing_epic])
                     return stories
-                role_stories = models.RoleStories.query.filter(models.RoleStories.role_id == role)
+                role_stories = models.RoleStories.query.filter(models.RoleStories.role_id == current_role)
                 role_stories.all()
                 story_list = []
                 for role_story in role_stories:
                     temp = models.Stories.query.filter(models.Stories.id == role_story.story_id).filter(models.Stories.containing_epic == None)
                     temp.all()
-                    story_list = []
                     for story in temp:
-                        story_list.append([story.id, story.story_title, story.description, story.containing_epic, story.workflow_id])
+                        role_description = str(story.description).replace("a user", current_role_name)
+                        story_list.append([story.id, story.story_title, role_description, story.containing_epic, story.workflow_id])
         else:
             temp = models.Stories.query.filter(models.Stories.containing_epic == epic)
             temp.all()
             story_list = []
             if temp:
                 for story in temp:
-                    story_list.append([story.id, story.story_title, story.description, story.containing_epic, story.workflow_id])
+                    role_description = str(story.description).replace("a user", current_role_name)
+                    story_list.append([story.id, story.story_title, role_description, story.containing_epic, story.workflow_id])
         return story_list
 
     @staticmethod
@@ -167,7 +187,12 @@ class DatabaseManager:
         temp = models.Stories.query.filter(models.Stories.id == story_id).first()
         story_list.append(temp.id)
         story_list.append(temp.story_title)
-        story_list.append(temp.description)
+        try:
+            current_role = self.get_role_name(app.config['CURRENT_ROLE'])
+        except KeyError:
+            current_role = "an Application User"
+        role_description = str(temp.description).replace("a user", current_role)
+        story_list.append(role_description)
         story_list.append(temp.containing_epic)
         story_list.append(temp.workflow_id)
         steps = models.Steps.query.filter(models.Steps.story_id == story_id).all()

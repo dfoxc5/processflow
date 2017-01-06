@@ -22,20 +22,24 @@ s3 = boto3.client(
 @app.route('/')
 def start():
     roles = db.get_roles()
+    db.clear_role()
     return render_template('home.html', roles=roles)
 
 
 @app.route('/roles_home')
 def save_role():
-    db.set_role(request.args.get('role', None))
+    db.set_role(int(request.args.get('role', None)))
     return redirect(url_for('.role_home'))
 
 
 @app.route('/role_home')
 def role_home():
-    current_role = db.role
+    try:
+        current_role = app.config['CURRENT_ROLE']
+    except KeyError:
+        current_role = 0
     if current_role is not 0:
-        stories_in_role = db.get_stories('0')
+        stories_in_role = db.get_stories('0', current_role)
         return render_template('rolehome.html', stories=stories_in_role)
     else:
         return redirect(url_for('.start'))
@@ -58,6 +62,7 @@ def add_story():
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_story():
+    db.clear_role()
     if request.method == 'POST':
         args = request.args.to_dict()
         try:
@@ -111,6 +116,7 @@ def upload_story():
             # return render_template('addstory.html', roles=roles, epic_title=epic_title, title=title,
             #                        description=description, assumption_list=zip(assumptions, linked_stories),
             #                        epic_list=epics, stories=stories, steps=steps)
+            db.set_role(4)
             story_list = db.get_story(story)
             return render_template('storywalkthroughbase.html', story_list=story_list)
 
@@ -126,6 +132,8 @@ def get_story():
         edit = 'False'
     story_list = db.get_story(story)
     if edit == 'True':
+        db.clear_role()
+        story_list = db.get_story(story)
         assumptions = []
         links = []
         for i, assumption_list in enumerate(story_list[6]):

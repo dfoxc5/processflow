@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="testDB.db" uuid="4ee21daf-60cf-402c-9613-3c1fe303a364">
+    <data-source name="appDB" uuid="1e7b6f3c-9d48-4062-a652-ff62204f37a5">
       <database-info product="SQLite" version="3.8.11" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>
       <auth-required>false</auth-required>
-    </data-source>
-    <data-source name="postgres@localhost" uuid="0cf79a06-cf9f-4ff2-b6eb-bc4528d25776">
-      <database-info product="PostgreSQL" version="9.6.1" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>postgres</user-name>
-      <resolve-scope>postgres:postgres,public</resolve-scope>
     </data-source>
   </component>
 </project>
