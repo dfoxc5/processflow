@@ -43,9 +43,3 @@ class Assumptions(db.Model):
 class Workflows(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     location = db.Column(db.String)
-
-
-class CurrentRole(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    role_id = 0
-

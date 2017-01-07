@@ -6,7 +6,7 @@ from os.path import join, dirname, realpath
 app = Flask(__name__)
 app.secret_key = 'some_secret'
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['LOCAL'] = False
+app.config['LOCAL'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 if app.config['LOCAL']:
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'testDB.db')

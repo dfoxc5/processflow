@@ -205,7 +205,11 @@ class DatabaseManager:
         for assumption in assumptions:
             temp.append([assumption.id, assumption.story_id, assumption.assumption, assumption.containing_id])
         story_list.append(temp)
-        story_list.append(self.role)
+        roles = models.RoleStories.query.filter(models.RoleStories.story_id == story_id).all()
+        temp = [0, 0, 0]
+        for role in roles:
+            temp[role.role_id - 1] = "checked"
+        story_list.append(temp)
         return story_list
 
     @staticmethod

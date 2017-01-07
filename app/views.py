@@ -118,14 +118,13 @@ def upload_story():
             #                        epic_list=epics, stories=stories, steps=steps)
             db.set_role(4)
             story_list = db.get_story(story)
-            return render_template('storywalkthroughbase.html', story_list=story_list)
+            return redirect(url_for('.get_story', story=story_list[0], edit=False))
 
 
 @app.route('/stories_home')
 def get_story():
     args = request.args.to_dict()
     story = args['story']
-    # s3.download_file("processflowc5", "test", join(dirname(realpath(__file__)), 'static/images/downloads/test.gif'))
     try:
         edit = args['edit']
     except KeyError:
@@ -142,7 +141,7 @@ def get_story():
                 links.append(db.get_story(story_list[6][i][3])[1])
             except TypeError:
                 links.append("")
-        return render_template('addstory.html', role=story_list[-1], epic_title=story_list[3], title=story_list[1],
+        return render_template('addstory.html', roles=story_list[-1], epic_title=story_list[3], title=story_list[1],
                                description=story_list[2], assumption_list=zip(assumptions, links), steps=story_list[5], id=story_list[0])
     epic = False
     current_stories = []
