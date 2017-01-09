@@ -1,19 +1,6 @@
 from app import db
 
 
-class Roles(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    role_name = db.Column(db.String)
-
-
-class Stories(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    story_title = db.Column(db.String)
-    description = db.Column(db.String)
-    containing_epic = db.Column(db.Integer, db.ForeignKey('stories.id'))
-    workflow_id = db.Column(db.Integer, db.ForeignKey('workflows.id'))
-
-
 class RoleStories(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
@@ -33,6 +20,19 @@ class Assumptions(db.Model):
     story_id = db.Column(db.Integer, db.ForeignKey('stories.id'))
     assumption = db.Column(db.String)
     containing_id = db.Column(db.Integer, db.ForeignKey('stories.id'))
+
+
+class Roles(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    role_name = db.Column(db.String)
+
+
+class Stories(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    story_title = db.Column(db.String)
+    description = db.Column(db.String)
+    containing_epic = db.Column(db.Integer, db.ForeignKey('stories.id'))
+    workflow_id = db.Column(db.Integer, db.ForeignKey('workflows.id'))
 
 
 class Workflows(db.Model):
