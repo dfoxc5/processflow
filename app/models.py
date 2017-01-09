@@ -14,11 +14,6 @@ class Stories(db.Model):
     workflow_id = db.Column(db.Integer, db.ForeignKey('workflows.id'))
 
 
-# class Epics(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     story_id = db.Column(db.Integer, db.ForeignKey('stories.id'))
-
-
 class RoleStories(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     role_id = db.Column(db.Integer, db.ForeignKey('roles.id'))
