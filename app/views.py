@@ -147,7 +147,7 @@ def get_story():
                 links.append("")
         return render_template('addstory.html', roles=story_list[-1], epic_title=story_list[3], title=story_list[1],
                                description=story_list[2], assumption_list=zip(assumptions, links), steps=story_list[5],
-                               id=story_list[0], stories=stories, epics=epics)
+                               id=story_list[0], stories=stories, epic_list=epics)
     epic = False
     current_stories = []
     containing_epics = []
