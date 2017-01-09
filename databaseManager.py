@@ -66,7 +66,7 @@ class DatabaseManager:
         if epic == '0':
             if current_role is not 0:
                 if current_role == 4:
-                    temp = models.Stories.query.order_by(models.Stories.story_title.asc()).all
+                    temp = models.Stories.query.order_by(models.Stories.story_title.asc())
                     temp.all()
                     stories = []
                     for story in temp:
