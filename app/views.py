@@ -166,12 +166,13 @@ def get_story():
                            stories=current_stories, containing_epics=containing_epics)
 
 
-@app.route('/delete')
+@app.route('/delete', methods=['GET'])
 def delete_story():
-    args = request.args.to_dict()
-    story = args['story']
-    db.delete_story(story)
-    flash("Story successfully deleted")
+    if request.method == 'GET':
+        args = request.args.to_dict()
+        story = args['story']
+        db.delete_story(story)
+        flash("Story successfully deleted")
     return redirect(url_for('.start'))
 
 
