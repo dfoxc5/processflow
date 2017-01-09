@@ -66,12 +66,15 @@ class DatabaseManager:
         if epic == '0':
             if current_role is not 0:
                 if current_role == 4:
-                    temp = models.Stories.query.filter(models.Stories.containing_epic == None).order_by(models.Stories.story_title.asc())
+                    temp = models.Stories.query.order_by(models.Stories.story_title.asc()).all
                     temp.all()
                     stories = []
                     for story in temp:
-                        role_description = str(story.description).replace("a user", current_role_name)
-                        stories.append([story.id, story.story_title, role_description, story.containing_epic])
+                        story_id = story.id
+                        steps = models.Steps.query.filter(models.Steps.story_id == story_id).count()
+                        if steps != 0:
+                            role_description = str(story.description).replace("a user", current_role_name)
+                            stories.append([story.id, story.story_title, role_description, story.containing_epic])
                     return stories
                 role_stories = models.RoleStories.query.filter(models.RoleStories.role_id == current_role)
                 role_stories.all()

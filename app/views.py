@@ -62,6 +62,8 @@ def add_story():
 
 @app.route('/upload', methods=['GET', 'POST'])
 def upload_story():
+    epics = db.get_all_epics()
+    stories = db.get_all_stories()
     db.clear_role()
     if request.method == 'POST':
         args = request.args.to_dict()
@@ -123,6 +125,8 @@ def upload_story():
 
 @app.route('/stories_home')
 def get_story():
+    epics = db.get_all_epics()
+    stories = db.get_all_stories()
     args = request.args.to_dict()
     story = args['story']
     try:
