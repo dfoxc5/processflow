@@ -235,8 +235,6 @@ class DatabaseManager:
         old_role_stories.all()
         for old_role_story in old_role_stories:
             db.session.delete(old_role_story)
-        old_story = models.Stories.query.filter(models.Stories.id == story_id).first()
-        db.session.delete(old_story)
         old_steps = models.Steps.query.filter(models.Steps.story_id == story_id)
         old_steps.all()
         for old_step in old_steps:
@@ -245,6 +243,8 @@ class DatabaseManager:
         old_assumptions.all()
         for old_assumption in old_assumptions:
             db.session.delete(old_assumption)
+        old_story = models.Stories.query.filter(models.Stories.id == story_id).first()
+        db.session.delete(old_story)
         db.session.commit()
 
     def update_story(self, story):
