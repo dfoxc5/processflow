@@ -97,20 +97,20 @@
                     {% for step in steps %}
                         {% if step %}
                             <div class="StepLine Between DragStepLine" ondragover="allowDrop(event);" ondrop="drop(event);"></div>
-                            <div class="StepLine" id="stepLine{{ steps.index(step) }}" draggable="true" ondragstart="drag(event);">
+                            <div class="StepLine" id="stepLine{{ steps.index(step) }}" draggable="true" ondragstart="drag(event);" ondragover="return false">
                                 <div class="Delete" onclick="deleteStep(this);">&#9986;</div>
                                 {% if step[3].__len__() > 1 %}
-                                    <input class="AddInput Step" name="step" autocomplete="off" value="{{ step[3] }}">
+                                    <input class="AddInput Step" name="step" autocomplete="off" value="{{ step[3] }}" ondragover="return false">
                                 {% endif %}
                                 {% if step[3].__len__() == 1 %}
-                                    <input class="AddInput Step" name="step" autocomplete="off" value="{{ step }}">
+                                    <input class="AddInput Step" name="step" autocomplete="off" value="{{ step }}" ondragover="return false">
                                 {% endif %}
                             </div>
                         {% endif %}
                     {% endfor %}
                     {% if steps.__len__() < 1 %}
                         <div class="StepLine Between DragStepLine" ondragover="allowDrop(event);" ondrop="drop(event);"></div>
-                        <div class="StepLine" id="stepLine1" draggable="true" ondragstart="drag(event);">
+                        <div class="StepLine" id="stepLine1" draggable="true" ondragstart="drag(event);" ondragover="return false">
                             <div class="Delete" onclick="deleteStep(this);">&#9986;</div>
                             <input class="AddInput Step" name="step" id="step1" autocomplete="off" placeholder="Step">
                         </div>

@@ -42,7 +42,7 @@ class DatabaseManager:
 
     @staticmethod
     def get_all_stories():
-        temp = models.Stories.query.all()
+        temp = models.Stories.query.order_by(models.Stories.story_title.asc()).all()
         stories = []
         for story in temp:
             stories.append(story.story_title)
@@ -66,7 +66,7 @@ class DatabaseManager:
         if epic == '0':
             if current_role is not 0:
                 if current_role == 4:
-                    temp = models.Stories.query.filter(models.Stories.containing_epic == None)
+                    temp = models.Stories.query.filter(models.Stories.containing_epic == None).order_by(models.Stories.story_title.asc())
                     temp.all()
                     stories = []
                     for story in temp:
@@ -77,13 +77,13 @@ class DatabaseManager:
                 role_stories.all()
                 story_list = []
                 for role_story in role_stories:
-                    temp = models.Stories.query.filter(models.Stories.id == role_story.story_id).filter(models.Stories.containing_epic == None)
+                    temp = models.Stories.query.filter(models.Stories.id == role_story.story_id).filter(models.Stories.containing_epic == None).order_by(models.Stories.story_title.asc())
                     temp.all()
                     for story in temp:
                         role_description = str(story.description).replace("a user", current_role_name)
                         story_list.append([story.id, story.story_title, role_description, story.containing_epic, story.workflow_id])
         else:
-            temp = models.Stories.query.filter(models.Stories.containing_epic == epic)
+            temp = models.Stories.query.filter(models.Stories.containing_epic == epic).order_by(models.Stories.story_title.asc())
             temp.all()
             story_list = []
             if temp:
