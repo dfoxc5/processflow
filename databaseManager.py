@@ -222,8 +222,8 @@ class DatabaseManager:
             return False
 
     def get_containing_epics(self, story_title):
-        # if story_title == '':
-        #     return []
+        if story_title == '' or story_title is None:
+            return []
         containing_epics = []
         # if isinstance(story_title, str):
         #     temp = models.Stories.query.filter(models.Stories.story_title == story_title).first()
