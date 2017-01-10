@@ -226,7 +226,10 @@ class DatabaseManager:
 
     def get_containing_epics(self, story_title):
         containing_epics = []
-        temp = models.Stories.query.filter(models.Stories.story_title == story_title).first()
+        if isinstance(story_title, str):
+            temp = models.Stories.query.filter(models.Stories.story_title == story_title).first()
+        else:
+            temp = models.Stories.query.filter(models.Stories.id == story_title).first()
         containing_epics.append([temp.id, temp.story_title, temp.description, temp.containing_epic])
         if self.get_epic(temp.containing_epic) != 0:
             self.get_containing_epics(temp.id)
