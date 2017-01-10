@@ -122,7 +122,7 @@ def upload_story():
             #                        epic_list=epics, stories=stories, steps=steps)
             db.set_role(4)
             story_list = db.get_story(story)
-            return redirect(url_for('.get_story', story=story_list[0], edit=False))
+            return redirect(url_for('.get_story', edit=False, story=story_list[0]))
 
 
 @app.route('/stories_home')
@@ -156,7 +156,7 @@ def get_story():
     if story_list[5].__len__() == 0:
         epic = True
         current_stories = db.get_stories(story_list[1], app.config['CURRENT_ROLE'])
-    if story_list[3] is not None:
+    if story_list[3] != '' or story_list is not None:
         containing_epics = db.get_containing_epics(story_list[3])
     for step in story_list[5]:
         if step[2] == 3:

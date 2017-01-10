@@ -108,7 +108,7 @@ class DatabaseManager:
         name = str(name)
         description = str(description)
         if epic_title == 0 or epic_title is None:
-            epic_title = None
+            epic_title = ''
         else:
             epic_title = str(epic_title)
         if workflow == '' or workflow is None:
