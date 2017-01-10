@@ -154,7 +154,7 @@ def get_story():
     containing_epics = []
     if story_list[5].__len__() == 0:
         epic = True
-        current_stories = db.get_stories(story_list[0], app.config['CURRENT_ROLE'])
+        current_stories = db.get_stories(story_list[1], app.config['CURRENT_ROLE'])
     if story_list[3] is not None:
         containing_epics = db.get_containing_epics(story_list[3])
     for step in story_list[5]:

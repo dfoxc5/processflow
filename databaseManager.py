@@ -86,8 +86,7 @@ class DatabaseManager:
                         role_description = str(story.description).replace("a user", current_role_name)
                         story_list.append([story.id, story.story_title, role_description, story.containing_epic, story.workflow_id])
         else:
-            epic_name = self.get_story(epic)
-            temp = models.Stories.query.filter(models.Stories.containing_epic == epic_name[1]).order_by(models.Stories.story_title.asc())
+            temp = models.Stories.query.filter(models.Stories.containing_epic == epic).order_by(models.Stories.story_title.asc())
             temp.all()
             story_list = []
             if temp:
@@ -175,7 +174,6 @@ class DatabaseManager:
         db.session.commit()
 
     def save_story(self, roles, epic_title, title, description, assumptions, linked_stories, workflow, steps):
-        epic_title = self.get_epic(epic_title)
         story_id = self.create_user_story(title, description, workflow, epic_title)
         if story_id != 0:
             self.create_role_story(roles, story_id)
