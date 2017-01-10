@@ -256,7 +256,7 @@ class DatabaseManager:
 
     def update_story(self, story):
         if story[3] == 'None' or story[3] == '':
-            story[3] = None
+            story[3] = ''
         if story[4] == 'None' or story[4] == '':
             story[4] = None
         old_story = models.Stories.query.filter(models.Stories.id == story[0]).first()
