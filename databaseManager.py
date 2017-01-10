@@ -80,7 +80,7 @@ class DatabaseManager:
                 role_stories.all()
                 story_list = []
                 for role_story in role_stories:
-                    temp = models.Stories.query.filter(models.Stories.id == role_story.story_id).order_by(models.Stories.story_title.asc()).all()
+                    temp = models.Stories.query.filter(models.Stories.id == role_story.story_id).filter(models.Stories.containing_epic == '').order_by(models.Stories.story_title.asc()).all()
                     for story in temp:
                         role_description = str(story.description).replace("a user", current_role_name)
                         story_list.append([story.id, story.story_title, role_description, story.containing_epic, story.workflow_id])

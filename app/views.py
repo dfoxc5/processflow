@@ -56,7 +56,8 @@ def add_story():
         assumptions = request.form.getlist('assumption')
         steps = request.form.getlist("step")
         return render_template('addstory.html', role=role, epic_title=epic_title, title=title,
-                               description=description, assumptions=assumptions, steps=steps)
+                               description=description, assumptions=assumptions, steps=steps,
+                               stories=stories, epic_list=epics)
     else:
         return render_template('addstory.html', stories=stories, epic_list=epics)
 
