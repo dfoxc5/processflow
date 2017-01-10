@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="beeecf5a-7331-4e83-8ebf-38b6afffbdb2" name="Default" comment="Requirements file">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/testDB.db" afterPath="$PROJECT_DIR$/app/testDB.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views.py" afterPath="$PROJECT_DIR$/app/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/databaseManager.py" afterPath="$PROJECT_DIR$/databaseManager.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -126,8 +124,8 @@
       <file leaf-file-name="databaseManager.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/databaseManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="213" column="25" lean-forward="false" selection-start-line="213" selection-start-column="15" selection-end-line="213" selection-end-column="25" />
+            <state relative-caret-position="143">
+              <caret line="224" column="8" lean-forward="false" selection-start-line="224" selection-start-column="10" selection-end-line="233" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -263,8 +261,8 @@
         <option value="$PROJECT_DIR$/app/templates/addstory.html" />
         <option value="$PROJECT_DIR$/app/models.py" />
         <option value="$PROJECT_DIR$/app/db_create.py" />
-        <option value="$PROJECT_DIR$/databaseManager.py" />
         <option value="$PROJECT_DIR$/app/views.py" />
+        <option value="$PROJECT_DIR$/databaseManager.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
       </list>
     </option>
@@ -1180,14 +1178,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/databaseManager.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="213" column="25" lean-forward="false" selection-start-line="213" selection-start-column="15" selection-end-line="213" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="633">
@@ -1195,6 +1185,14 @@
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/databaseManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="224" column="8" lean-forward="false" selection-start-line="224" selection-start-column="10" selection-end-line="233" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
