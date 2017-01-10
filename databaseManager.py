@@ -86,7 +86,8 @@ class DatabaseManager:
                         role_description = str(story.description).replace("a user", current_role_name)
                         story_list.append([story.id, story.story_title, role_description, story.containing_epic, story.workflow_id])
         else:
-            temp = models.Stories.query.filter(models.Stories.containing_epic == epic).order_by(models.Stories.story_title.asc())
+            epic_name = self.get_story(epic)
+            temp = models.Stories.query.filter(models.Stories.containing_epic == epic_name[1]).order_by(models.Stories.story_title.asc())
             temp.all()
             story_list = []
             if temp:
@@ -223,9 +224,9 @@ class DatabaseManager:
         else:
             return False
 
-    def get_containing_epics(self, story_id):
+    def get_containing_epics(self, story_title):
         containing_epics = []
-        temp = models.Stories.query.filter(models.Stories.id == story_id).first()
+        temp = models.Stories.query.filter(models.Stories.story_title == story_title).first()
         containing_epics.append([temp.id, temp.story_title, temp.description, temp.containing_epic])
         if self.get_epic(temp.containing_epic) != 0:
             self.get_containing_epics(temp.id)

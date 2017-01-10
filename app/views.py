@@ -10,6 +10,7 @@ UPLOAD_FOLDER = join(dirname(realpath(__file__)), 'static/images/uploads_full/')
 DOWNLOAD_FOLDER = join(dirname(realpath(__file__)), 'static/images/downloads/')
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['DOWNLOAD_FOLDER'] = DOWNLOAD_FOLDER
+app.config['CURRENT_ROLE'] = 0
 epics = db.get_all_epics()
 stories = db.get_all_stories()
 s3 = boto3.client(
@@ -153,8 +154,7 @@ def get_story():
     containing_epics = []
     if story_list[5].__len__() == 0:
         epic = True
-        # current_stories = db.get_stories(story_list[0])
-        current_stories = []
+        current_stories = db.get_stories(story_list[0], app.config['CURRENT_ROLE'])
     if story_list[3] is not None:
         containing_epics = db.get_containing_epics(story_list[3])
     for step in story_list[5]:
