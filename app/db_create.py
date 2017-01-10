@@ -10,7 +10,7 @@ from sqlalchemy.schema import (
 
 
 def init_database():
-    # drop_everything(db)
+    drop_everything(db)
     db.create_all()
     roles = models.Roles.query.all()
     if len(roles) is 0:
