@@ -256,7 +256,7 @@ class DatabaseManager:
         references = models.Stories.query.filter(models.Stories.containing_epic == old_title[1]).all()
         if references:
             for reference in references:
-                references.containing_epic = ''
+                reference.containing_epic = ''
         db.session.commit()
 
     def update_story(self, story):
