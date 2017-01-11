@@ -48,6 +48,8 @@ def role_home():
 
 @app.route('/add_story', methods=['GET', 'POST'])
 def add_story():
+    epics = db.get_all_epics()
+    stories = db.get_all_stories()
     if request.method == 'POST':
         role = request.form['roleSelect']
         epic_title = request.form['epic_title']
