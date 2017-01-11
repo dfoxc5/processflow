@@ -236,9 +236,9 @@ class DatabaseManager:
                 self.get_containing_epics(temp.id)
         return containing_epics
 
-    @staticmethod
-    def delete_story(story_id):
+    def delete_story(self, story_id):
         story_id = int(story_id)
+        old_title = self.get_story(story_id)
         old_role_stories = models.RoleStories.query.filter(models.RoleStories.story_id == story_id)
         old_role_stories.all()
         for old_role_story in old_role_stories:
@@ -253,6 +253,10 @@ class DatabaseManager:
             db.session.delete(old_assumption)
         old_story = models.Stories.query.filter(models.Stories.id == story_id).first()
         db.session.delete(old_story)
+        references = models.Stories.query.filter(models.Stories.containing_epic == old_title[1]).all()
+        if references:
+            for reference in references:
+                references.containing_epic = ''
         db.session.commit()
 
     def update_story(self, story):
