@@ -163,7 +163,7 @@ def get_story():
     for step in story_list[5]:
         if step[2] == 3:
             image_name = str(step[3]).replace("%2F", "/")
-            downloaded = isfile(image_name)
+            downloaded = isfile(join(dirname(realpath(__file__)), image_name))
             if not downloaded:
                 try:
                     s3.download_file("processflowc5", image_name, join(dirname(realpath(__file__)), image_name))
