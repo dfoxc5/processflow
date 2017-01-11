@@ -230,9 +230,10 @@ class DatabaseManager:
         # elif isinstance(story_title, int):
         #     temp = models.Stories.query.filter(models.Stories.id == story_title).first()
         temp = models.Stories.query.filter(models.Stories.story_title == story_title).first()
-        containing_epics.append([temp.id, temp.story_title, temp.description, temp.containing_epic])
-        if self.get_epic(temp.containing_epic) != 0:
-            self.get_containing_epics(temp.id)
+        if temp:
+            containing_epics.append([temp.id, temp.story_title, temp.description, temp.containing_epic])
+            if self.get_epic(temp.containing_epic) != 0:
+                self.get_containing_epics(temp.id)
         return containing_epics
 
     @staticmethod
