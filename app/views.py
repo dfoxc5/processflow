@@ -96,15 +96,6 @@ def upload_story():
         workflow = request.form['workflow_num']
         steps = request.form.getlist("step")
         files = request.files.getlist("step")
-        for file in files:
-            filename = secure_filename(file.filename)
-            filename = str(title).replace(" ", "_").lower() + "_" + filename
-            saved = isfile(app.config['UPLOAD_FOLDER'] + filename)
-            if not saved:
-                file.save(join(app.config['UPLOAD_FOLDER'], filename))
-                file_location = app.config['UPLOAD_FOLDER'] + filename
-                key = 'static/images/downloads/' + filename
-                s3.upload_file(file_location, "processflowc5", key)
         story_saved = db.check_story(title)
         if edit == 'False':
             if story_saved:
@@ -114,10 +105,28 @@ def upload_story():
                                        epic_list=epics, stories=stories, steps=steps)
             flash('The story was successfully saved')
             db.save_story(roles, epic_title, title, description, assumptions, linked_stories, workflow, steps)
+            for file in files:
+                filename = secure_filename(file.filename)
+                filename = str(title).replace(" ", "_").lower() + "_" + filename
+                saved = isfile(app.config['UPLOAD_FOLDER'] + filename)
+                if not saved:
+                    file.save(join(app.config['UPLOAD_FOLDER'], filename))
+                    file_location = app.config['UPLOAD_FOLDER'] + filename
+                    key = 'static/images/downloads/' + filename
+                    s3.upload_file(file_location, "processflowc5", key)
             return redirect(url_for('add_story'))
         elif edit == 'True':
             story_to_update = [story, title, description, epic_title, workflow, steps, assumptions, linked_stories, roles]
             db.update_story(story_to_update)
+            for file in files:
+                filename = secure_filename(file.filename)
+                filename = str(title).replace(" ", "_").lower() + "_" + filename
+                saved = isfile(app.config['UPLOAD_FOLDER'] + filename)
+                if not saved:
+                    file.save(join(app.config['UPLOAD_FOLDER'], filename))
+                    file_location = app.config['UPLOAD_FOLDER'] + filename
+                    key = 'static/images/downloads/' + filename
+                    s3.upload_file(file_location, "processflowc5", key)
             flash('The story has been updated successfully')
             # return render_template('addstory.html', roles=roles, epic_title=epic_title, title=title,
             #                        description=description, assumption_list=zip(assumptions, linked_stories),

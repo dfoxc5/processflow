@@ -50,13 +50,13 @@
                         <div class="StoryTableCell StoryDescription AssumptionList">
                             <ul>
                                 {% for assumption in story_list[6] %}
-                                    {% if assumption[3] != 0 %}
+                                    {% if assumption[3] != None %}
                                         <a href="/stories_home?story={{ assumption[3] }}">
                                             <li>{{ assumption[2] }}</li>
                                         </a>
                                     {% endif %}
-                                    {% if assumption[3] == 0 %}
-                                        <li>{{ assumption[2] }}</li>
+                                    {% if assumption[3] == None %}
+                                        <li onclick="AddAssumptionCheck();">{{ assumption[2] }}</li>
                                     {% endif %}
                                 {% endfor %}
                             </ul>

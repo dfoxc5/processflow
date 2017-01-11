@@ -3,7 +3,7 @@ from app import app, models, db_create, db
 
 class DatabaseManager:
     role = ''
-    approved_files = ['.gif', '.GIF']
+    approved_files = ['.gif', '.GIF', '.pdf', '.PDF']
 
     def __init__(self):
         db_create.init_database()
@@ -176,7 +176,7 @@ class DatabaseManager:
         story_id = self.create_user_story(title, description, workflow, epic_title)
         if story_id != 0:
             self.create_role_story(roles, story_id)
-            if assumptions:
+            if assumptions and assumptions[0] != '':
                 self.create_assumptions(story_id, assumptions, linked_stories)
             if len(steps) > 1:
                 self.create_steps(story_id, title, steps)
@@ -265,6 +265,11 @@ class DatabaseManager:
         if story[4] == 'None' or story[4] == '':
             story[4] = None
         old_story = models.Stories.query.filter(models.Stories.id == story[0]).first()
+        old_title = old_story.story_title
+        references = models.Stories.query.filter(models.Stories.containing_epic == old_title).all()
+        if references:
+            for reference in references:
+                reference.containing_epic = story[1]
         old_story.story_title = story[1]
         old_story.description = story[2]
         old_story.containing_epic = story[3]
